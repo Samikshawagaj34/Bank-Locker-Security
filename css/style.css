@@ -163,6 +163,11 @@ body
     margin-top: 30px;
     
 }
+.service-h2
+{
+    text-align: center;
+    font-size: 30px;
+}
 footer
 {
    
@@ -329,4 +334,10 @@ footer
 {
     height: 18px;
    
+}
+.service-img
+{
+    width: 400px;
+    height: 400px;
+    margin: 40px;
 }

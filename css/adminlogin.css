@@ -1,8 +1,7 @@
-.h1
-{
+.h1 {
     text-align: center;
     font-size: 60px;
-}
+  }
 .from-container
 {
     height: 400px;
@@ -12,7 +11,7 @@
     margin-top: 50px;
     background-color: white; 
 }
-.register-from
+.login-from
 {
     padding: 10px;
     margin: 60px auto;
@@ -42,4 +41,13 @@
 .btn-login:hover
 {
     color: black;
+}
+.already-account
+{
+    margin: 10px auto;
+}
+.register-ahref
+{
+    text-decoration: none;
+    color: #ff7200;
 }

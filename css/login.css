@@ -3,3 +3,66 @@ body
   
 
 }
+.container
+{
+    height: 500px;
+    width: 100%;
+    background-color: #fffffe;
+    margin: 5px auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.content
+{
+    height: 300px;
+    width: 280px;
+    background-color: #f8f5f2;
+    border: 1px solid #232323;
+    border-radius: 5px;
+    margin-top: 90px;
+    margin-left: 60px;
+   
+}
+.login-h1
+{
+    font-size: 35px;
+    text-align: center;
+}
+.login-paragraph
+{
+    font-size: 20px;
+  text-align: center;
+  padding: 5px;
+  font-family: Arial;
+  letter-spacing: 1.
+}
+.adnin-h3
+{
+    font-size: 18px;
+    text-align: center;
+}
+.admin-img
+{
+    width: 100px;
+    height: 100px;
+    margin-left: 75px;
+  
+
+    
+}
+.admin-btn
+{
+    background-color:  #ff7200;
+    color: white;
+    width: 90px;
+    height: 30px;
+    margin: 20px;
+    margin-left: 90px;
+    border-radius: 10px;
+}
+.admin-ahref
+{
+    text-decoration: none;
+    color: white;
+}
