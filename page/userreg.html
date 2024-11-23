@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,7 +7,6 @@
     <link rel="stylesheet" href="./../css/userreg.css">
     <title>Document</title>
 </head>
-<body>
     <nav class="nav-family">
         <h2 class="page-heading">Bank Locker Security</h2>
         <ul class="ul-item">
@@ -19,12 +18,84 @@
 
         </ul>
     </nav>
+
+    <form>
+   
+        <h1 class="heading">Registration Form</h1>
+        <label for="">Enter your name</label><br>
+        <input type="text" placeholder="Enter your name" id="inp1">
+        <br>
+        <br>
+        
+        <label for="">Enter your Email</label><br>
+        <input type="email" placeholder="Enter your email" id="inp2">
+        <br>
+        <br>
+        
+        <label for="">Phone Number</label><br>
+        <input type="number" placeholder="Enter your phone Number" id="inp3">
+        <label for="">Birth Date</label>
+        <input type="date" id="inp4"> <br>
+        <br>
+        <div>
+            <label >
+            <input type="radio" value="option1" name="option">male
+        </label>
+        <label>
+            <input type="radio" value="option2" name="option">Female
+        </label>
+        <label>
+            <input type="radio" value="option3" name="option">prefer not to say
+        </label>
+
+        </div>
+        <h2>Address</h2><br>
+        <input type="text" placeholder="Enter current address"> <br>
+        <br>
+
+        <input type="text" placeholder="Enter retierment address"> <br>
+        <br>
+        <label for="country">Select country:</label>
+        <select name="country" id="country">
+        <option value="us">Untied States</option>
+        <option value="Ca">Canada</option>
+        <option value="uk">Untied Kingdom</option>
+        <option value="au">Austraila</option>
+        <option value="in">India</option>
+        <option value="ja">Japan</option>
+        <option value="fa">France</option>
+    </select>
+    <input type="text"placeholder="Enter your city" id="cites">
+    <br>
+    <br>
+    <input type="text" name="" id="States" placeholder="Enter your state">
+    <input type="text" name="" id="districts" placeholder="Enter your district"><br>
+    <br>
+    <label for="">Branch name :</label>
+    <input type="text" placeholder="Enter branch name" id="bran">
+    <label for="">IfSC Code :</label>
+    <input type="text" placeholder="Enter IFSC code">
+    <br>
+    <br>
+    <label for="accountes">Account No :</label>
+    <input type="number" id="accountes"placeholder="Enter account no">
+    <label for="accountes">Account No :</label>
+    <input type="number" id="accountes"placeholder="Enter account no">
+    <br>
+    <br><label for="">photo :</label>
+    <input type="file"value = "multiple">
+    </form>
+   
+
+
+
+
+
+    
          
     
    
-            <div>
-                photo: <input type="file">
-            </div>
+            
 
 </body>
 </html>

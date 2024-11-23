@@ -21,11 +21,11 @@
     </nav>
     <h1 class="h1">Login Here!!!</h1>
     <div class=" from-container">
-    <form action="" class="login-from">
+    <form action="./../connect.php" method="post"    class="login-from">
        
-        <input type="email" class="input" name="email" placeholder=" Enter your email">
-        <input type="password" class="input" name="password" placeholder=" Enter your password"><br>
-        <button class="btn-login" >login</button>
+        <input  type="email" class="input" name="email" placeholder=" Enter your email" id="email">
+        <input type="password" class="input" name="password" placeholder=" Enter your password" id="password"><br>
+        <button type="submit" class="btn-login" value="login" id="login" >login</button>
         <div id="faceDetect"></div>
         <div class="already-account">
             <p>Don't have  an Account? <a href="./../page/userreg.html" class="register-ahref">Register here</a></p>
