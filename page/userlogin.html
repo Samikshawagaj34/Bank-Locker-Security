@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./../css/style.css">
-    <link rel="stylesheet" href="./../css/adminlogin.css">
+    <link rel="stylesheet" href="./../css/userlogin.css">
     <title>Document</title>
 </head>
 <body>
@@ -19,22 +19,50 @@
 
         </ul>
     </nav>
-    <h1 class="h1">Login Here!!!</h1>
-    <div class=" from-container">
-    <form action="./../connect.php" method="post"    class="login-from">
-       
-        <input  type="email" class="input" name="email" placeholder=" Enter your email" id="email">
-        <input type="password" class="input" name="password" placeholder=" Enter your password" id="password"><br>
-        <button type="submit" class="btn-login" value="login" id="login" >login</button>
-        <div id="faceDetect"></div>
-        <div class="already-account">
-            <p>Don't have  an Account? <a href="./../page/userreg.html" class="register-ahref">Register here</a></p>
-
-        </div>
-
-    </form>
-   </div> 
    
-      <py-script src="./../page/face.py" ></py-script>
+    <div class="container">
+        <div class="content">
+            <h1 class="login-h1">Login Here</h1>
+            <form action="./../connect.php" method="post" class="login-form">
+                <input type="email" class="input" name="email" placeholder="Enter your email" id="email" required>
+                <input type="password" class="input" name="password" placeholder="Enter your password" id="password" required>
+                <button type="submit" class="btn-login" id="login">Login</button>
+            </form>
+            <div class="already-account">
+                <p>Don't have an account? <a href="./../page/userreg.html" class="register-ahref">Register here</a></p>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <div class="footer-container">
+            <div class="social-icon">
+                <a href="" class="social-icon-ahref"><i class="fa-brands fa-facebook social-icon-img"></i></a>
+                <a href="" class="social-icon-ahref"><i class="fa-brands fa-instagram social-icon-img"></i></a>
+                <a href="" class="social-icon-ahref"><i class="fa-brands fa-twitter social-icon-img"></i></a>
+                <a href="" class="social-icon-ahref"><i class="fa-brands fa-youtube social-icon-img"></i></a>
+
+            </div>
+            <div class="footer-nav">
+                <ul class="footer-ul">
+                    <li class="footer-li"><a href="./../index.html" class="footer-ahref">Home</a></li>
+                    <li class="footer-li"><a href="./../page/about.html" class="footer-ahref">About</a></li>
+                    <li class="footer-li"><a href="./../page/contact.html" class="footer-ahref">Contact Us</a></li>
+                    <li class="footer-li"><a href="./../index.html" class="footer-ahref">Our Team</a></li>
+
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p class="footer-bottom-p">
+                &copy; 2024 <span class="footer-span">Bank Locker Security</span>. All rights reserved.
+            </p>
+        </div>
+    </footer>
+
+
+
+   <script defer src="https://cdn.jsdelivr.net/npm/face-api.js"></script>
+   <!-- Include Custom JavaScript -->
+   <script defer src="./../js/facedetect.js"></script>
 </body>
 </html>

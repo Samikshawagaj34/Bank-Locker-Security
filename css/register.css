@@ -1,45 +1,48 @@
-.h1
-{
+.register-title {
+    font-size: 30px;
+    margin-top: 20px;
+    color: #333;
     text-align: center;
-    font-size: 60px;
 }
-.from-container
-{
-    height: 400px;
-    width: 450px;
-    border: 1px solid black;
-    margin-left: 530px;
-    margin-top: 50px;
-    background-color: white; 
+
+.form-container {
+    width: 400px;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin: 50px auto;
 }
-.register-from
-{
+
+.form-group {
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+label {
+    font-weight: bold;
+    display: block;
+}
+
+input {
+    width: 100%;
     padding: 10px;
-    margin: 60px auto;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
 }
-.input
-{
-    margin: 15px;
-    height: 20px;
-    width: 300px;
+
+.btn-submit {
+    font-size: 18px;
+    background-color: #ff7200;
+    border: none;
+    border-radius: 5px;
+    width: 100%;
+    padding: 10px;
+    color: white;
+    cursor: pointer;
 }
-.btn-login
-{
-   font-size: 25px;
-   background-color: #ff7200;
-   border: none;
-   border-radius: 5px;
-   width: 100px;
-   height: 40px;
-   color: white;
-   cursor: pointer;
-  
-}
-.btn-login:hover
-{
-    color: black;
+
+.btn-submit:hover {
+    background-color: #e66100;
 }

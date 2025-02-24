@@ -1,101 +1,144 @@
 <!DOCTYPE html>
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./../css/style.css">
-    <link rel="stylesheet" href="./../css/userreg.css">
-    <title>Document</title>
-</head>
-    <nav class="nav-family">
-        <h2 class="page-heading">Bank Locker Security</h2>
-        <ul class="ul-item">
-            <li class="li-item"><a href="./../index.html" class="nav-ahref">Home</a></li>
-            <li class="li-item"><a href="./../page/about.html" class="nav-ahref">About</a></li>
-            <li class="li-item"><a href="./../page/service.html" class="nav-ahref">Services</a></li>
-            <li class="li-item"><a href="./../page/contact.html" class="nav-ahref">Contact</a></li>
-            <button class="login-btn"><a href="./../page/userreg.html" class="btn-ahref">Login</a></button>
-
-        </ul>
-    </nav>
-
-    <form>
-   
-        <h1 class="heading">Registration Form</h1>
-        <label for="">Enter your name</label><br>
-        <input type="text" placeholder="Enter your name" id="inp1">
-        <br>
-        <br>
-        
-        <label for="">Enter your Email</label><br>
-        <input type="email" placeholder="Enter your email" id="inp2">
-        <br>
-        <br>
-        
-        <label for="">Phone Number</label><br>
-        <input type="number" placeholder="Enter your phone Number" id="inp3">
-        <label for="">Birth Date</label>
-        <input type="date" id="inp4"> <br>
-        <br>
-        <div>
-            <label >
-            <input type="radio" value="option1" name="option">male
-        </label>
-        <label>
-            <input type="radio" value="option2" name="option">Female
-        </label>
-        <label>
-            <input type="radio" value="option3" name="option">prefer not to say
-        </label>
-
-        </div>
-        <h2>Address</h2><br>
-        <input type="text" placeholder="Enter current address"> <br>
-        <br>
-
-        <input type="text" placeholder="Enter retierment address"> <br>
-        <br>
-        <label for="country">Select country:</label>
-        <select name="country" id="country">
-        <option value="us">Untied States</option>
-        <option value="Ca">Canada</option>
-        <option value="uk">Untied Kingdom</option>
-        <option value="au">Austraila</option>
-        <option value="in">India</option>
-        <option value="ja">Japan</option>
-        <option value="fa">France</option>
-    </select>
-    <input type="text"placeholder="Enter your city" id="cites">
-    <br>
-    <br>
-    <input type="text" name="" id="States" placeholder="Enter your state">
-    <input type="text" name="" id="districts" placeholder="Enter your district"><br>
-    <br>
-    <label for="">Branch name :</label>
-    <input type="text" placeholder="Enter branch name" id="bran">
-    <label for="">IfSC Code :</label>
-    <input type="text" placeholder="Enter IFSC code">
-    <br>
-    <br>
-    <label for="accountes">Account No :</label>
-    <input type="number" id="accountes"placeholder="Enter account no">
-    <label for="accountes">Account No :</label>
-    <input type="number" id="accountes"placeholder="Enter account no">
-    <br>
-    <br><label for="">photo :</label>
-    <input type="file"value = "multiple">
-    </form>
-   
-
-
-
-
-
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="./../css/style.css">
+        <link rel="stylesheet" href="./../css/userreg.css">
+        <title>Document</title>
+    </head>
+    <body>
+        <nav class="nav-family">
+            <h2 class="page-heading">Bank Locker Security</h2>
+            <ul class="ul-item">
+                <li class="li-item"><a href="./../index.html" class="nav-ahref">Home</a></li>
+                <li class="li-item"><a href="./../page/about.html" class="nav-ahref">About</a></li>
+                <li class="li-item"><a href="./../page/service.html" class="nav-ahref">Services</a></li>
+                <li class="li-item"><a href="./../page/contact.html" class="nav-ahref">Contact</a></li>
+                <button class="login-btn"><a href="./../page/login.html" class="btn-ahref">Login</a></button>
     
-         
-    
-   
+            </ul>
+        </nav>
+
+        <section class="container">
+            <h1 class="heading">Registration Form</h1>
             
-
+            <label for="name">Enter Your Name:</label>
+            <input type="text" id="name" placeholder="Enter your name">
+        
+            <label for="email">Enter Your Email:</label>
+            <input type="email" id="email" placeholder="Enter your email">
+        
+            <label for="phone">Phone Number:</label>
+            <input type="number" id="phone" placeholder="Enter your phone number">
+        
+            <label for="dob">Birth Date:</label>
+            <input type="date" id="dob">
+        
+            <div class="gender-container">
+                <label><input type="radio" name="gender" value="male"> Male</label>
+                <label><input type="radio" name="gender" value="female"> Female</label>
+                <label><input type="radio" name="gender" value="other"> Prefer not to say</label>
+            </div>
+        
+            <label for="address">Current Address:</label>
+            <input type="text" id="address" placeholder="Enter current address">
+        
+            <label for="retirement_address">Retirement Address:</label>
+            <input type="text" id="retirement_address" placeholder="Enter retirement address">
+        
+            <label for="country">Select Country:</label>
+            <select id="country">
+                <option value="us">United States</option>
+                <option value="ca">Canada</option>
+                <option value="uk">United Kingdom</option>
+                <option value="au">Australia</option>
+                <option value="in">India</option>
+                <option value="ja">Japan</option>
+                <option value="fr">France</option>
+            </select>
+        
+            <label for="state">Select State:</label>
+            <select id="state">
+                <option value="mh">Maharashtra</option>
+                <option value="ka">Karnataka</option>
+                <option value="gj">Gujarat</option>
+                <option value="dl">Delhi</option>
+                <option value="tn">Tamil Nadu</option>
+                <option value="wb">West Bengal</option>
+                <option value="rj">Rajasthan</option>
+                <option value="up">Uttar Pradesh</option>
+                <option value="mp">Madhya Pradesh</option>
+                <option value="pb">Punjab</option>
+            </select>
+        
+            <label for="district">Select District:</label>
+            <select id="district">
+                <option value="solapur">Solapur</option>
+                <option value="pune">Pune</option>
+                <option value="mumbai">Mumbai</option>
+                <option value="nashik">Nashik</option>
+                <option value="nagpur">Nagpur</option>
+                <option value="aurangabad">Aurangabad</option>
+                <option value="thane">Thane</option>
+                <option value="satara">Satara</option>
+                <option value="kolhapur">Kolhapur</option>
+                <option value="amravati">Amravati</option>
+            </select>
+        
+            <label for="taluka">Select Taluka:</label>
+            <select id="taluka">
+                <option value="pandharpur">Pandharpur</option>
+                <option value="akkalkot">Akkalkot</option>
+                <option value="barshi">Barshi</option>
+                <option value="sangola">Sangola</option>
+                <option value="mohol">Mohol</option>
+                <option value="madha">Madha</option>
+                <option value="karmala">Karmala</option>
+                <option value="malshiras">Malshiras</option>
+                <option value="north_solapur">North Solapur</option>
+                <option value="south_solapur">South Solapur</option>
+            </select>
+        
+            <label for="branch">Branch Name:</label>
+            <input type="text" id="branch" placeholder="Enter branch name">
+        
+            <label for="ifsc">IFSC Code:</label>
+            <input type="text" id="ifsc" placeholder="Enter IFSC code">
+        
+            <label for="account">Account No:</label>
+            <input type="number" id="account" placeholder="Enter account number">
+        
+            <label for="photo">Upload Photo:</label>
+            <input type="file" id="photo">
+        
+            <button type="submit" class="submit-btn">Register</button>
+        </section>
+        <footer>
+            <div class="footer-container">
+                <div class="social-icon">
+                    <a href="" class="social-icon-ahref"><i class="fa-brands fa-facebook social-icon-img"></i></a>
+                    <a href="" class="social-icon-ahref"><i class="fa-brands fa-instagram social-icon-img"></i></a>
+                    <a href="" class="social-icon-ahref"><i class="fa-brands fa-twitter social-icon-img"></i></a>
+                    <a href="" class="social-icon-ahref"><i class="fa-brands fa-youtube social-icon-img"></i></a>
+    
+                </div>
+                <div class="footer-nav">
+                    <ul class="footer-ul">
+                        <li class="footer-li"><a href="./../index.html" class="footer-ahref">Home</a></li>
+                        <li class="footer-li"><a href="./../page/about.html" class="footer-ahref">About</a></li>
+                        <li class="footer-li"><a href="./../page/contact.html" class="footer-ahref">Contact Us</a></li>
+                        <li class="footer-li"><a href="./../index.html" class="footer-ahref">Our Team</a></li>
+    
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p class="footer-bottom-p">
+                    &copy; 2024 <span class="footer-span">Bank Locker Security</span>. All rights reserved.
+                </p>
+            </div>
+        </footer>
+        
 </body>
 </html>

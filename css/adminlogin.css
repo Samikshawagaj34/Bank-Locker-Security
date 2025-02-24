@@ -1,53 +1,59 @@
-.h1 {
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
     text-align: center;
-    font-size: 60px;
-  }
-.from-container
-{
-    height: 400px;
-    width: 450px;
-    border: 1px solid black;
-    margin-left: 530px;
-    margin-top: 50px;
-    background-color: white; 
 }
-.login-from
-{
-    padding: 10px;
-    margin: 60px auto;
+
+.login-title {
+    font-size: 36px;
+    margin-top: 50px;
+}
+
+.form-container {
+    width: 350px;
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin: 50px auto;
+}
+
+.login-form {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
 }
-.input
-{
-    margin: 15px;
-    height: 20px;
-    width: 300px;
+
+.input-field {
+    margin: 10px 0;
+    padding: 10px;
+    width: 100%;
+    border: 1px solid #ccc;
+    border-radius: 5px;
 }
-.btn-login
-{
-   font-size: 25px;
-   background-color: #ff7200;
-   border: none;
-   border-radius: 5px;
-   width: 100px;
-   height: 40px;
-   color: white;
-   cursor: pointer;
-  
+
+.btn-login {
+    font-size: 18px;
+    background-color: #ff7200;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    padding: 10px;
+    cursor: pointer;
 }
-.btn-login:hover
-{
-    color: black;
+
+.btn-login:hover {
+    background-color: #e66000;
 }
-.already-account
-{
-    margin: 10px auto;
+
+.already-account {
+    margin-top: 10px;
 }
-.register-ahref
-{
+
+.register-link {
     text-decoration: none;
     color: #ff7200;
+}
+
+.register-link:hover {
+    text-decoration: underline;
 }
