@@ -3,73 +3,86 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./../css/style.css">
-    <link rel="stylesheet" href="./../css/register.css">
+    <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
     integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>Register</title>
 </head>
 <body>
-    <nav class="nav-family">
-        <h2 class="page-heading">Bank Locker Security</h2>
-        <ul class="ul-item">
-            <li class="li-item"><a href="./../index.html" class="nav-ahref">Home</a></li>
-            <li class="li-item"><a href="./../page/about.html" class="nav-ahref">About</a></li>
-            <li class="li-item"><a href="./../page/service.html" class="nav-ahref">Services</a></li>
-            <li class="li-item"><a href="./../page/contact.html" class="nav-ahref">Contact</a></li>
-            <button class="login-btn"><a href="./../page/adminreg.html" class="btn-ahref">Login</a></button>
-
-        </ul>
-    </nav>
-    <h1 class="register-title">Register Here</h1>
-    <div class="form-container">
-        <form action="" method="post">
-            <div class="form-group">
-                <label for="name">Name:</label>
-                <input type="text" id="name" name="name" required>
-            </div>
-            <div class="form-group">
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required>
-            </div>
-            <div class="form-group">
-                <label for="password">Password:</label>
-                <input type="password" id="password" name="password" required>
-            </div>
-            <div class="form-group">
-                <label for="confirm">Confirm Password:</label>
-                <input type="password" id="confirm" name="confirm" required>
-            </div>
-            <input type="submit" class="btn-submit" value="Register">
-        </form>
-    </div>
-
-    <footer>
-        <div class="footer-container">
-            <div class="social-icon">
-                <a href="" class="social-icon-ahref"><i class="fa-brands fa-facebook social-icon-img"></i></a>
-                <a href="" class="social-icon-ahref"><i class="fa-brands fa-instagram social-icon-img"></i></a>
-                <a href="" class="social-icon-ahref"><i class="fa-brands fa-twitter social-icon-img"></i></a>
-                <a href="" class="social-icon-ahref"><i class="fa-brands fa-youtube social-icon-img"></i></a>
-
-            </div>
-            <div class="footer-nav">
-                <ul class="footer-ul">
-                    <li class="footer-li"><a href="./../index.html" class="footer-ahref">Home</a></li>
-                    <li class="footer-li"><a href="./../page/about.html" class="footer-ahref">About</a></li>
-                    <li class="footer-li"><a href="./../page/contact.html" class="footer-ahref">Contact Us</a></li>
-                    <li class="footer-li"><a href="./../index.html" class="footer-ahref">Our Team</a></li>
-
-                </ul>
-            </div>
+    <nav class="bg-gray-900 p-4">
+        <div class="container mx-auto flex justify-between items-center">
+            <h2 class="text-2xl font-bold text-orange-500">Bank Locker Security</h2>
+            <button class="md:hidden text-white focus:outline-none" id="menu-toggle">
+                <i class="fa-solid fa-bars text-2xl"></i>
+            </button>
+            <ul class="hidden md:flex space-x-6 text-white text-lg" id="menu">
+                <li><a href="index.html" class="hover:text-indigo-400">Home</a></li>
+                <li><a href="./page/about.html" class="hover:text-indigo-400">About</a></li>
+                <li><a href="./page/service.html" class="hover:text-indigo-400">Services</a></li>
+                <li><a href="./page/contact.html" class="hover:text-indigo-400">Contact</a></li>
+                <li>
+                    <a href="./page/login.html" class="bg-orange-500 px-4 py-2 rounded-md text-white hover:bg-orange-600">Login</a>
+                </li>
+            </ul>
         </div>
-        <div class="footer-bottom">
-            <p class="footer-bottom-p">
-                &copy; 2024 <span class="footer-span">Bank Locker Security</span>. All rights reserved.
-            </p>
+        <div class="md:hidden hidden bg-gray-800 p-4" id="mobile-menu">
+            <ul class="flex flex-col space-y-4 text-white text-lg">
+                <li><a href="./../index.html" class="hover:text-indigo-400">Home</a></li>
+                <li><a href="./../page/about.html" class="hover:text-indigo-400">About</a></li>
+                <li><a href="./../page/service.html" class="hover:text-indigo-400">Services</a></li>
+                <li><a href="./../page/contact.html" class="hover:text-indigo-400">Contact</a></li>
+                <li>
+                    <a href="./../page/login.html" class="bg-orange-500 px-4 py-2 rounded-md text-white hover:bg-orange-600">Login</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    
+    <div class="flex flex-col items-center justify-center min-h-screen bg-gray-100">
+        <h1 class="text-3xl font-bold mb-6 text-gray-800">Register Here</h1>
+        <div class="bg-white p-6 rounded-lg shadow-lg w-full max-w-md">
+            <form action="" method="post" class="space-y-4">
+                <div>
+                    <label for="name" class="block font-semibold text-gray-700">Name:</label>
+                    <input type="text" id="name" name="name" class="w-full px-4 py-2 border rounded-md focus:ring-2 focus:ring-orange-500 focus:outline-none" required>
+                </div>
+                <div>
+                    <label for="email" class="block font-semibold text-gray-700">Email:</label>
+                    <input type="email" id="email" name="email" class="w-full px-4 py-2 border rounded-md focus:ring-2 focus:ring-orange-500 focus:outline-none" required>
+                </div>
+                <div>
+                    <label for="password" class="block font-semibold text-gray-700">Password:</label>
+                    <input type="password" id="password" name="password" class="w-full px-4 py-2 border rounded-md focus:ring-2 focus:ring-orange-500 focus:outline-none" required>
+                </div>
+                <div>
+                    <label for="confirm" class="block font-semibold text-gray-700">Confirm Password:</label>
+                    <input type="password" id="confirm" name="confirm" class="w-full px-4 py-2 border rounded-md focus:ring-2 focus:ring-orange-500 focus:outline-none" required>
+                </div>
+                <input type="submit" value="Register" class="w-full bg-orange-500 text-white py-2 rounded-md hover:bg-orange-600 transition text-lg font-semibold cursor-pointer">
+            </form>
+        </div>
+    </div>
+    
+
+    <footer class="bg-gray-900 text-white py-8 mt-10">
+        <div class="container mx-auto flex flex-col items-center">
+            <div class="flex space-x-4 mb-4">
+                <a href="#" class="text-white text-2xl hover:text-indigo-500"><i class="fa-brands fa-facebook"></i></a>
+                <a href="#" class="text-white text-2xl hover:text-indigo-500"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#" class="text-white text-2xl hover:text-indigo-500"><i class="fa-brands fa-twitter"></i></a>
+                <a href="#" class="text-white text-2xl hover:text-indigo-500"><i class="fa-brands fa-youtube"></i></a>
+            </div>
+            <ul class="flex space-x-6 text-lg">
+                <li><a href="./../index.html" class="hover:text-indigo-400">Home</a></li>
+                <li><a href="./../page/about.html" class="hover:text-indigo-400">About</a></li>
+                <li><a href="./../page/contact.html" class="hover:text-indigo-400">Contact Us</a></li>
+                <li><a href="./../page/service.html" class="hover:text-indigo-400">Our Services</a></li>
+            </ul>
+            <p class="mt-4 text-sm">&copy; 2024 <span class="text-indigo-400 font-bold">Bank Locker Security</span>. All rights reserved.</p>
         </div>
     </footer>
+    <script src="./../js/script.js"></script>
     
 </body>
 </html>

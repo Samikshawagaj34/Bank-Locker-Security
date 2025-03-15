@@ -3,145 +3,145 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="./../css/style.css">
-        <link rel="stylesheet" href="./../css/userreg.css">
+       
+        
+        <script src="https://cdn.tailwindcss.com"></script>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
         integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
         <title>Document</title>
     </head>
     <body>
-        <nav class="nav-family">
-            <h2 class="page-heading">Bank Locker Security</h2>
-            <ul class="ul-item">
-                <li class="li-item"><a href="./../index.html" class="nav-ahref">Home</a></li>
-                <li class="li-item"><a href="./../page/about.html" class="nav-ahref">About</a></li>
-                <li class="li-item"><a href="./../page/service.html" class="nav-ahref">Services</a></li>
-                <li class="li-item"><a href="./../page/contact.html" class="nav-ahref">Contact</a></li>
-                <button class="login-btn"><a href="./../page/login.html" class="btn-ahref">Login</a></button>
-    
-            </ul>
+        <nav class="bg-gray-900 p-4">
+            <div class="container mx-auto flex justify-between items-center">
+                <h2 class="text-2xl font-bold text-orange-500">Bank Locker Security</h2>
+                <button class="md:hidden text-white focus:outline-none" id="menu-toggle">
+                    <i class="fa-solid fa-bars text-2xl"></i>
+                </button>
+                <ul class="hidden md:flex space-x-6 text-white text-lg" id="menu">
+                    <li><a href="./../index.html" class="hover:text-indigo-400">Home</a></li>
+                    <li><a href="./../page/about.html" class="hover:text-indigo-400">About</a></li>
+                    <li><a href="./../page/service.html" class="hover:text-indigo-400">Services</a></li>
+                    <li><a href="./../page/contact.html" class="hover:text-indigo-400">Contact</a></li>
+                    <li>
+                        <a href="./../page/login.html" class="bg-orange-500 px-4 py-2 rounded-md text-white hover:bg-orange-600">Login</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="md:hidden hidden bg-gray-800 p-4" id="mobile-menu">
+                <ul class="flex flex-col space-y-4 text-white text-lg">
+                    <li><a href="./../index.html" class="hover:text-indigo-400">Home</a></li>
+                    <li><a href="./../page/about.html" class="hover:text-indigo-400">About</a></li>
+                    <li><a href="./../page/service.html" class="hover:text-indigo-400">Services</a></li>
+                    <li><a href="./../page/contact.html" class="hover:text-indigo-400">Contact</a></li>
+                    <li>
+                        <a href="./../page/login.html" class="bg-orange-500 px-4 py-2 rounded-md text-white hover:bg-orange-600">Login</a>
+                    </li>
+                </ul>
+            </div>
         </nav>
 
-        <section class="container">
-            <h1 class="heading">Registration Form</h1>
-            
-            <label for="name">Enter Your Name:</label>
-            <input type="text" id="name" placeholder="Enter your name">
-        
-            <label for="email">Enter Your Email:</label>
-            <input type="email" id="email" placeholder="Enter your email">
-        
-            <label for="phone">Phone Number:</label>
-            <input type="number" id="phone" placeholder="Enter your phone number">
-        
-            <label for="dob">Birth Date:</label>
-            <input type="date" id="dob">
-        
-            <div class="gender-container">
-                <label><input type="radio" name="gender" value="male"> Male</label>
-                <label><input type="radio" name="gender" value="female"> Female</label>
-                <label><input type="radio" name="gender" value="other"> Prefer not to say</label>
+        <section class="bg-gray-100 py-10 px-5 flex justify-center">
+            <div class="bg-white shadow-lg rounded-lg p-6 max-w-lg w-full">
+                <h1 class="text-3xl font-bold text-center text-gray-800 mb-6">Registration Form</h1>
+                
+                <form class="space-y-4">
+                    <div>
+                        <label for="name" class="block text-gray-700 font-bold">Enter Your Name:</label>
+                        <input type="text" id="name" placeholder="Enter your name" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-orange-500 focus:outline-none">
+                    </div>
+                
+                    <div>
+                        <label for="email" class="block text-gray-700 font-bold">Enter Your Email:</label>
+                        <input type="email" id="email" placeholder="Enter your email" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-orange-500 focus:outline-none">
+                    </div>
+                
+                    <div>
+                        <label for="phone" class="block text-gray-700 font-bold">Phone Number:</label>
+                        <input type="number" id="phone" placeholder="Enter your phone number" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-orange-500 focus:outline-none">
+                    </div>
+                
+                    <div>
+                        <label for="dob" class="block text-gray-700 font-bold">Birth Date:</label>
+                        <input type="date" id="dob" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-orange-500 focus:outline-none">
+                    </div>
+                
+                    <div>
+                        <label class="block text-gray-700 font-bold">Gender:</label>
+                        <div class="flex gap-4">
+                            <label class="flex items-center"><input type="radio" name="gender" value="male" class="mr-2"> Male</label>
+                            <label class="flex items-center"><input type="radio" name="gender" value="female" class="mr-2"> Female</label>
+                            <label class="flex items-center"><input type="radio" name="gender" value="other" class="mr-2"> Prefer not to say</label>
+                        </div>
+                    </div>
+                
+                    <div>
+                        <label for="address" class="block text-gray-700 font-bold">Current Address:</label>
+                        <input type="text" id="address" placeholder="Enter current address" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-orange-500 focus:outline-none">
+                    </div>
+                
+                    <div>
+                        <label for="country" class="block text-gray-700 font-bold">Select Country:</label>
+                        <select id="country" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-orange-500 focus:outline-none">
+                            <option value="in">India</option>
+                            <option value="us">United States</option>
+                            <option value="ca">Canada</option>
+                        </select>
+                    </div>
+                
+                    <div>
+                        <label for="state" class="block text-gray-700 font-bold">Select State:</label>
+                        <select id="state" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-orange-500 focus:outline-none">
+                            <option value="mh">Maharashtra</option>
+                            <option value="ka">Karnataka</option>
+                        </select>
+                    </div>
+                
+                    <div>
+                        <label for="district" class="block text-gray-700 font-bold">Select District:</label>
+                        <select id="district" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-orange-500 focus:outline-none">
+                            <option value="solapur">Solapur</option>
+                            <option value="pune">Pune</option>
+                        </select>
+                    </div>
+                
+                    <div>
+                        <label for="taluka" class="block text-gray-700 font-bold">Select Taluka:</label>
+                        <select id="taluka" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-orange-500 focus:outline-none">
+                            <option value="pandharpur">Pandharpur</option>
+                            <option value="akkalkot">Akkalkot</option>
+                        </select>
+                    </div>
+                
+                    <div>
+                        <label for="photo" class="block text-gray-700 font-bold">Upload Photo:</label>
+                        <input type="file" id="photo" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-orange-500 focus:outline-none">
+                    </div>
+                
+                    <button type="submit" class="w-full bg-orange-500 text-white py-2 rounded-md hover:bg-orange-600 transition text-lg font-bold">Register</button>
+                </form>
             </div>
-        
-            <label for="address">Current Address:</label>
-            <input type="text" id="address" placeholder="Enter current address">
-        
-            <label for="retirement_address">Retirement Address:</label>
-            <input type="text" id="retirement_address" placeholder="Enter retirement address">
-        
-            <label for="country">Select Country:</label>
-            <select id="country">
-                <option value="us">United States</option>
-                <option value="ca">Canada</option>
-                <option value="uk">United Kingdom</option>
-                <option value="au">Australia</option>
-                <option value="in">India</option>
-                <option value="ja">Japan</option>
-                <option value="fr">France</option>
-            </select>
-        
-            <label for="state">Select State:</label>
-            <select id="state">
-                <option value="mh">Maharashtra</option>
-                <option value="ka">Karnataka</option>
-                <option value="gj">Gujarat</option>
-                <option value="dl">Delhi</option>
-                <option value="tn">Tamil Nadu</option>
-                <option value="wb">West Bengal</option>
-                <option value="rj">Rajasthan</option>
-                <option value="up">Uttar Pradesh</option>
-                <option value="mp">Madhya Pradesh</option>
-                <option value="pb">Punjab</option>
-            </select>
-        
-            <label for="district">Select District:</label>
-            <select id="district">
-                <option value="solapur">Solapur</option>
-                <option value="pune">Pune</option>
-                <option value="mumbai">Mumbai</option>
-                <option value="nashik">Nashik</option>
-                <option value="nagpur">Nagpur</option>
-                <option value="aurangabad">Aurangabad</option>
-                <option value="thane">Thane</option>
-                <option value="satara">Satara</option>
-                <option value="kolhapur">Kolhapur</option>
-                <option value="amravati">Amravati</option>
-            </select>
-        
-            <label for="taluka">Select Taluka:</label>
-            <select id="taluka">
-                <option value="pandharpur">Pandharpur</option>
-                <option value="akkalkot">Akkalkot</option>
-                <option value="barshi">Barshi</option>
-                <option value="sangola">Sangola</option>
-                <option value="mohol">Mohol</option>
-                <option value="madha">Madha</option>
-                <option value="karmala">Karmala</option>
-                <option value="malshiras">Malshiras</option>
-                <option value="north_solapur">North Solapur</option>
-                <option value="south_solapur">South Solapur</option>
-            </select>
-        
-            <label for="branch">Branch Name:</label>
-            <input type="text" id="branch" placeholder="Enter branch name">
-        
-            <label for="ifsc">IFSC Code:</label>
-            <input type="text" id="ifsc" placeholder="Enter IFSC code">
-        
-            <label for="account">Account No:</label>
-            <input type="number" id="account" placeholder="Enter account number">
-        
-            <label for="photo">Upload Photo:</label>
-            <input type="file" id="photo">
-        
-            <button type="submit" class="submit-btn">Register</button>
         </section>
-        <footer>
-            <div class="footer-container">
-                <div class="social-icon">
-                    <a href="" class="social-icon-ahref"><i class="fa-brands fa-facebook social-icon-img"></i></a>
-                    <a href="" class="social-icon-ahref"><i class="fa-brands fa-instagram social-icon-img"></i></a>
-                    <a href="" class="social-icon-ahref"><i class="fa-brands fa-twitter social-icon-img"></i></a>
-                    <a href="" class="social-icon-ahref"><i class="fa-brands fa-youtube social-icon-img"></i></a>
-    
+        
+
+        <footer class="bg-gray-900 text-white py-8 mt-10">
+            <div class="container mx-auto flex flex-col items-center">
+                <div class="flex space-x-4 mb-4">
+                    <a href="#" class="text-white text-2xl hover:text-indigo-500"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="#" class="text-white text-2xl hover:text-indigo-500"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#" class="text-white text-2xl hover:text-indigo-500"><i class="fa-brands fa-twitter"></i></a>
+                    <a href="#" class="text-white text-2xl hover:text-indigo-500"><i class="fa-brands fa-youtube"></i></a>
                 </div>
-                <div class="footer-nav">
-                    <ul class="footer-ul">
-                        <li class="footer-li"><a href="./../index.html" class="footer-ahref">Home</a></li>
-                        <li class="footer-li"><a href="./../page/about.html" class="footer-ahref">About</a></li>
-                        <li class="footer-li"><a href="./../page/contact.html" class="footer-ahref">Contact Us</a></li>
-                        <li class="footer-li"><a href="./../index.html" class="footer-ahref">Our Team</a></li>
-    
-                    </ul>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p class="footer-bottom-p">
-                    &copy; 2024 <span class="footer-span">Bank Locker Security</span>. All rights reserved.
-                </p>
+                <ul class="flex space-x-6 text-lg">
+                    <li><a href="./../index.html" class="hover:text-indigo-400">Home</a></li>
+                    <li><a href="./../page/about.html" class="hover:text-indigo-400">About</a></li>
+                    <li><a href="./../page/contact.html" class="hover:text-indigo-400">Contact Us</a></li>
+                    <li><a href="./../page/service.html" class="hover:text-indigo-400">Our Services</a></li>
+                </ul>
+                <p class="mt-4 text-sm">&copy; 2024 <span class="text-indigo-400 font-bold">Bank Locker Security</span>. All rights reserved.</p>
             </div>
         </footer>
+        <script src="./../js/script.js"></script>
         
 </body>
 </html>

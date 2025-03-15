@@ -1,3 +1,12 @@
+document.getElementById("menu-toggle").addEventListener("click", function() {
+    document.getElementById("mobile-menu").classList.toggle("hidden");
+});
+
+
+
+
+
+
 const images = [ "./images/BANK-LOCKER1.avif","./images/face-recognition-img.jpg","./images/OTP-img.jpg", ]
 let index = 0;
 const slide = document.getElementById('slide');
@@ -31,4 +40,6 @@ else{
 
 
 }
-setInterval(next, 2000);
+
+
+

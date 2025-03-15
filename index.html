@@ -4,7 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/style.css">
+   
+    <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
         integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -12,72 +13,87 @@
 </head>
 
 <body>
-    <nav class="nav-family">
-        <h2 class="page-heading">Bank Locker Security</h2>
-        <ul class="ul-item">
-            <li class="li-item"><a href="index.html" class="nav-ahref">Home</a></li>
-            <li class="li-item"><a href="./page/about.html" class="nav-ahref">About</a></li>
-            <li class="li-item"><a href="./page/service.html" class="nav-ahref">Services</a></li>
-            <li class="li-item"><a href="./page/contact.html" class="nav-ahref">Contact</a></li>
-            <button class="login-btn"><a href="./backend/templates/login.html" class="btn-ahref">Login</a></button>
-
-        </ul>
+    <nav class="bg-gray-900 p-4">
+        <div class="container mx-auto flex justify-between items-center">
+            <h2 class="text-2xl font-bold text-orange-500">Bank Locker Security</h2>
+            <button class="md:hidden text-white focus:outline-none" id="menu-toggle">
+                <i class="fa-solid fa-bars text-2xl"></i>
+            </button>
+            <ul class="hidden md:flex space-x-6 text-white text-lg" id="menu">
+                <li><a href="index.html" class="hover:text-indigo-400">Home</a></li>
+                <li><a href="./page/about.html" class="hover:text-indigo-400">About</a></li>
+                <li><a href="./page/service.html" class="hover:text-indigo-400">Services</a></li>
+                <li><a href="./page/contact.html" class="hover:text-indigo-400">Contact</a></li>
+                <li>
+                    <a href="./page/login.html" class="bg-orange-500 px-4 py-2 rounded-md text-white hover:bg-orange-600">Login</a>
+                </li>
+            </ul>
+        </div>
+        <div class="md:hidden hidden bg-gray-800 p-4" id="mobile-menu">
+            <ul class="flex flex-col space-y-4 text-white text-lg">
+                <li><a href="index.html" class="hover:text-indigo-400">Home</a></li>
+                <li><a href="./page/about.html" class="hover:text-indigo-400">About</a></li>
+                <li><a href="./page/service.html" class="hover:text-indigo-400">Services</a></li>
+                <li><a href="./page/contact.html" class="hover:text-indigo-400">Contact</a></li>
+                <li>
+                    <a href="./page/login.html" class="bg-orange-500 px-4 py-2 rounded-md text-white hover:bg-orange-600">Login</a>
+                </li>
+            </ul>
+        </div>
     </nav>
-    <div class="parent-content">
-        <div class="child-content">
-            <h1 class="content-h1">Face detection & <br> OTP <span class="content-span">Authentication</span></h1>
-            <p class="content-paragraph"> Secure Your Bank locker With Face detection And OTP Authentication <br>Our
-                Bank Locker Security is designed to provide a safe and secure <br>environment for our customers
-                to store their valuables.</p>
-            <button class="know-more-btn"><a href="./page/about.html" class="know-more-ahref">KNOW MORE</a></button>
 
 
-
-
-
+    <div class="flex flex-col md:flex-row justify-around items-center bg-white p-6">
+        <div class="max-w-lg text-center md:text-left">
+            <h1 class="text-4xl md:text-4xl font-bold leading-tight">Face detection & <br> OTP <span class="text-orange-500 text-4xl">Authentication</span></h1>
+            <p class="mt-4 text-lg text-gray-700 leading-relaxed">Secure Your Bank locker With Face Detection And OTP Authentication. Our Bank Locker Security is designed to provide a safe and secure environment for our customers to store their valuables.</p>
+            <a href="./page/about.html" class="inline-block bg-orange-500 text-white px-6 py-3 rounded-lg text-lg font-semibold mt-4 hover:bg-orange-600 transition">KNOW MORE</a>
         </div>
-        <img src="./images/Bank-img.jpg" alt="" class="bank-img">
+        <img src="./images/Bank-img.jpg" alt="Bank Security" class="w-full md:w-1/2 h-auto rounded-lg shadow-lg mt-6 md:mt-0">
     </div>
-
-    <div class="parent-content">
-        <div class="child-content" >
-            <h2 class="service-h2">Our Services</h2>
+    
+    <div class="flex flex-col items-center bg-gray-100 p-8 rounded-lg shadow-lg mt-6 w-full max-w-4xl mx-auto">
+        <h2 class="text-4xl font-bold text-gray-900 mb-4">Our Services</h2>
+        <div class="relative w-full flex justify-center items-center">
            
+            <button class="absolute left-0 bg-gray-300 p-3 rounded-full hover:bg-gray-400 transition" onclick="prev()">
+                <img src="./images/previousicon.png" alt="Previous" class="w-8 h-8">
+            </button>
             
-            <img src="./images/BANK-LOCKER1.avif" alt="" class="slide" id="slide">
-
-            <img src="./images/previousicon.png" alt="" class="icon icon-pre" onclick="prev()"/>
-         <img src="./images/nexticon.png" alt="" class="icon icon-nex" onclick="next()"/>
+           
+            <img src="./images/BANK-LOCKER1.avif" alt="Service Image" class="w-full max-w-3xl h-80 object-cover rounded-lg shadow-lg" id="slide">
             
-             
+          
+            <button class="absolute right-0 bg-gray-300 p-3 rounded-full hover:bg-gray-400 transition" onclick="next()">
+                <img src="./images/nexticon.png" alt="Next" class="w-8 h-8">
+            </button>
         </div>
     </div>
+    
+    </div>
+    
+
+
+    
+    
 
     
 
-    <footer>
-        <div class="footer-container">
-            <div class="social-icon">
-                <a href="" class="social-icon-ahref"><i class="fa-brands fa-facebook social-icon-img"></i></a>
-                <a href="" class="social-icon-ahref"><i class="fa-brands fa-instagram social-icon-img"></i></a>
-                <a href="" class="social-icon-ahref"><i class="fa-brands fa-twitter social-icon-img"></i></a>
-                <a href="" class="social-icon-ahref"><i class="fa-brands fa-youtube social-icon-img"></i></a>
-
+    <footer class="bg-gray-900 text-white py-8 mt-10">
+        <div class="container mx-auto flex flex-col items-center">
+            <div class="flex space-x-4 mb-4">
+                <a href="#" class="text-white text-2xl hover:text-indigo-500"><i class="fa-brands fa-facebook"></i></a>
+                <a href="#" class="text-white text-2xl hover:text-indigo-500"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#" class="text-white text-2xl hover:text-indigo-500"><i class="fa-brands fa-twitter"></i></a>
+                <a href="#" class="text-white text-2xl hover:text-indigo-500"><i class="fa-brands fa-youtube"></i></a>
             </div>
-            <div class="footer-nav">
-                <ul class="footer-ul">
-                    <li class="footer-li"><a href="index.html" class="footer-ahref">Home</a></li>
-                    <li class="footer-li"><a href="./page/about.html" class="footer-ahref">About</a></li>
-                    <li class="footer-li"><a href="./page/contact.html" class="footer-ahref">Contact Us</a></li>
-                    <li class="footer-li"><a href="./index.html" class="footer-ahref">Our Team</a></li>
-
-                </ul>
-            </div>
-        </div>
-        <div class="footer-bottom">
-            <p class="footer-bottom-p">
-                &copy; 2024 <span class="footer-span">Bank Locker Security</span>. All rights reserved.
-            </p>
+            <ul class="flex space-x-6 text-lg">
+                <li><a href="./../index.html" class="hover:text-indigo-400">Home</a></li>
+                <li><a href="./../page/about.html" class="hover:text-indigo-400">About</a></li>
+                <li><a href="./../page/contact.html" class="hover:text-indigo-400">Contact Us</a></li>
+                <li><a href="./../page/service.html" class="hover:text-indigo-400">Our Services</a></li>
+            </ul>
+            <p class="mt-4 text-sm">&copy; 2024 <span class="text-indigo-400 font-bold">Bank Locker Security</span>. All rights reserved.</p>
         </div>
     </footer>
     <script src="./js/script.js"></script>

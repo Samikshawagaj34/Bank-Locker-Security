@@ -3,69 +3,94 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./../css/login.css">
-    <link rel="stylesheet" href="./../css/style.css">
+   
+    
+    <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
     integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>Document</title>
 </head>
 <body>
-    <nav class="nav-family">
-        <h2 class="page-heading">Bank Locker Security</h2>
-        <ul class="ul-item">
-            <li class="li-item"><a href="index.html" class="nav-ahref">Home</a></li>
-            <li class="li-item"><a href="./page/about.html" class="nav-ahref">About</a></li>
-            <li class="li-item"><a href="./page/service.html" class="nav-ahref">Services</a></li>
-            <li class="li-item"><a href="./page/contact.html" class="nav-ahref">Contact</a></li>
-            <button class="login-btn"><a href="./page/login.html" class="btn-ahref">Login</a></button>
-
-        </ul>
+    <nav class="bg-gray-900 p-4">
+        <div class="container mx-auto flex justify-between items-center">
+            <h2 class="text-2xl font-bold text-orange-500">Bank Locker Security</h2>
+            <button class="md:hidden text-white focus:outline-none" id="menu-toggle">
+                <i class="fa-solid fa-bars text-2xl"></i>
+            </button>
+            <ul class="hidden md:flex space-x-6 text-white text-lg" id="menu">
+                <li><a href="index.html" class="hover:text-indigo-400">Home</a></li>
+                <li><a href="./page/about.html" class="hover:text-indigo-400">About</a></li>
+                <li><a href="./page/service.html" class="hover:text-indigo-400">Services</a></li>
+                <li><a href="./page/contact.html" class="hover:text-indigo-400">Contact</a></li>
+                <li>
+                    <a href="./page/login.html" class="bg-orange-500 px-4 py-2 rounded-md text-white hover:bg-orange-600">Login</a>
+                </li>
+            </ul>
+        </div>
+        <div class="md:hidden hidden bg-gray-800 p-4" id="mobile-menu">
+            <ul class="flex flex-col space-y-4 text-white text-lg">
+                <li><a href="./../index.html" class="hover:text-indigo-400">Home</a></li>
+                <li><a href="./../page/about.html" class="hover:text-indigo-400">About</a></li>
+                <li><a href="./../page/service.html" class="hover:text-indigo-400">Services</a></li>
+                <li><a href="./../page/contact.html" class="hover:text-indigo-400">Contact</a></li>
+                <li>
+                    <a href="./../page/login.html" class="bg-orange-500 px-4 py-2 rounded-md text-white hover:bg-orange-600">Login</a>
+                </li>
+            </ul>
+        </div>
     </nav>
 
 
 
-    <h1 class="login-h1">Login Here</h1>
-    <p class="login-paragraph">Welcome! Please enter your credentials to access your account. Whether you’re a user looking to explore our features or an admin managing the platform, your security is our top priority. New users can easily register to join our community. If you encounter any issues logging in, don’t hesitate to reach out for support. Let’s get started on your journey!</p>
-    <div class="container">
-        <div class="content">
-            <h3 class="adnin-h3">Admin</h3>
-            <img src="./../images/admin.png" alt="" class="admin-img">
-            <button class="admin-btn"><a href="../page/adminlogin.html" class="admin-ahref">Login Here</a></button>
-            
 
-        </div>
-        <div class="content">
-            <h3 class="adnin-h3">User</h3>
-            <img src="./../images/user.png" alt="" class="admin-img">
-            <button class="admin-btn"><a href="../page/userlogin.html" class="admin-ahref">Login Here</a></button>
-        </div>
+
+
+    <div class="flex flex-col items-center justify-center min-h-screen bg-gray-100 px-4">
+        <h1 class="text-4xl font-bold text-gray-800 text-center">Login Here</h1>
+        <p class="text-lg text-gray-600 text-center max-w-2xl mt-3">
+            Welcome! Please enter your credentials to access your account. Whether you’re a user looking to explore our features or an admin managing the platform, your security is our top priority.
+            New users can easily register to join our community. If you encounter any issues logging in, don’t hesitate to reach out for support. Let’s get started on your journey!
+        </p>
         
-    </div>
-    <footer>
-        <div class="footer-container">
-            <div class="social-icon">
-                <a href="" class="social-icon-ahref"><i class="fa-brands fa-facebook social-icon-img"></i></a>
-                <a href="" class="social-icon-ahref"><i class="fa-brands fa-instagram social-icon-img"></i></a>
-                <a href="" class="social-icon-ahref"><i class="fa-brands fa-twitter social-icon-img"></i></a>
-                <a href="" class="social-icon-ahref"><i class="fa-brands fa-youtube social-icon-img"></i></a>
-
+        <div class="flex flex-col md:flex-row justify-center items-center gap-8 mt-8">
+            <!-- Admin Login -->
+            <div class="bg-white border border-gray-300 rounded-lg shadow-md p-6 w-72 text-center">
+                <h3 class="text-lg font-semibold text-gray-800">Admin</h3>
+                <img src="./../images/admin.png" alt="Admin" class="w-24 h-24 mx-auto my-4">
+                <a href="../page/adminlogin.html" class="bg-orange-500 text-white px-5 py-2 rounded-md text-lg font-medium hover:bg-orange-600 transition">Login Here</a>
             </div>
-            <div class="footer-nav">
-                <ul class="footer-ul">
-                    <li class="footer-li"><a href="./../index.html" class="footer-ahref">Home</a></li>
-                    <li class="footer-li"><a href="./../page/about.html" class="footer-ahref">About</a></li>
-                    <li class="footer-li"><a href="./../page/contact.html" class="footer-ahref">Contact Us</a></li>
-                    <li class="footer-li"><a href="./../index.html" class="footer-ahref">Our Team</a></li>
-
-                </ul>
+    
+            <!-- User Login -->
+            <div class="bg-white border border-gray-300 rounded-lg shadow-md p-6 w-72 text-center">
+                <h3 class="text-lg font-semibold text-gray-800">User</h3>
+                <img src="./../images/user.png" alt="User" class="w-24 h-24 mx-auto my-4">
+                <a href="../page/userlogin.html" class="bg-orange-500 text-white px-5 py-2 rounded-md text-lg font-medium hover:bg-orange-600 transition">Login Here</a>
             </div>
         </div>
-        <div class="footer-bottom">
-            <p class="footer-bottom-p">
-                &copy; 2024 <span class="footer-span">Bank Locker Security</span>. All rights reserved.
-            </p>
+    </div>
+    
+
+
+
+   
+    <footer class="bg-gray-900 text-white py-8 mt-10">
+        <div class="container mx-auto flex flex-col items-center">
+            <div class="flex space-x-4 mb-4">
+                <a href="#" class="text-white text-2xl hover:text-indigo-500"><i class="fa-brands fa-facebook"></i></a>
+                <a href="#" class="text-white text-2xl hover:text-indigo-500"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#" class="text-white text-2xl hover:text-indigo-500"><i class="fa-brands fa-twitter"></i></a>
+                <a href="#" class="text-white text-2xl hover:text-indigo-500"><i class="fa-brands fa-youtube"></i></a>
+            </div>
+            <ul class="flex space-x-6 text-lg">
+                <li><a href="./../index.html" class="hover:text-indigo-400">Home</a></li>
+                <li><a href="./../page/about.html" class="hover:text-indigo-400">About</a></li>
+                <li><a href="./../page/contact.html" class="hover:text-indigo-400">Contact Us</a></li>
+                <li><a href="./../page/service.html" class="hover:text-indigo-400">Our Services</a></li>
+            </ul>
+            <p class="mt-4 text-sm">&copy; 2024 <span class="text-indigo-400 font-bold">Bank Locker Security</span>. All rights reserved.</p>
         </div>
     </footer>
+    <script src="./../js/script.js"></script>
 </body>
 </html>

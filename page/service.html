@@ -3,91 +3,107 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./../css/style.css">
-    <link rel="stylesheet" href="./../css/service.css">
+   
+    <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
         integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>Document</title>
 </head>
 <body>
-    <nav class="nav-family">
-        <h2 class="page-heading">Bank Locker Security</h2>
-        <ul class="ul-item">
-            <li class="li-item"><a href="../index.html" class="nav-ahref">Home</a></li>
-            <li class="li-item"><a href="./../page/about.html" class="nav-ahref">About</a></li>
-            <li class="li-item"><a href="" class="nav-ahref">Services</a></li>
-            <li class="li-item"><a href="./../page/contact.html" class="nav-ahref">Contact</a></li>
-            <button class="login-btn"><a href="./../page/login.html" class="btn-ahref">Login</a></button>
-
-        </ul>
+    <nav class="bg-gray-900 p-4">
+        <div class="container mx-auto flex justify-between items-center">
+            <h2 class="text-2xl font-bold text-orange-500">Bank Locker Security</h2>
+            <button class="md:hidden text-white focus:outline-none" id="menu-toggle">
+                <i class="fa-solid fa-bars text-2xl"></i>
+            </button>
+            <ul class="hidden md:flex space-x-6 text-white text-lg" id="menu">
+                <li><a href="index.html" class="hover:text-indigo-400">Home</a></li>
+                <li><a href="./page/about.html" class="hover:text-indigo-400">About</a></li>
+                <li><a href="./page/service.html" class="hover:text-indigo-400">Services</a></li>
+                <li><a href="./page/contact.html" class="hover:text-indigo-400">Contact</a></li>
+                <li>
+                    <a href="./page/login.html" class="bg-orange-500 px-4 py-2 rounded-md text-white hover:bg-orange-600">Login</a>
+                </li>
+            </ul>
+        </div>
+        <div class="md:hidden hidden bg-gray-800 p-4" id="mobile-menu">
+            <ul class="flex flex-col space-y-4 text-white text-lg">
+                <li><a href="./../index.html" class="hover:text-indigo-400">Home</a></li>
+                <li><a href="./../page/about.html" class="hover:text-indigo-400">About</a></li>
+                <li><a href="./../page/service.html" class="hover:text-indigo-400">Services</a></li>
+                <li><a href="./../page/contact.html" class="hover:text-indigo-400">Contact</a></li>
+                <li>
+                    <a href="./../page/login.html" class="bg-orange-500 px-4 py-2 rounded-md text-white hover:bg-orange-600">Login</a>
+                </li>
+            </ul>
+        </div>
     </nav>
-    <h1 class="heading">Our Services </h1>
-    <div class="parent-container">
-        <div class="child-container">
-            <div class="face-head-p">
-                <h2 class="h2">Bank Locker</h2>
-                <p class="p-container">
-                    Banks offers locker facilities to individuals as when required both public as well as private sector
-                    <br>banks offer this facility to needy individuals for a small annual fee these lockers are
-                    maintained <br> in a secure facility that is under constant surveillance and security there are
-                    several <br> advantages of availing a bank locker.
-                </p>
-            </div>
-        </div>
-        <img src="./../images/BANK-LOCKER1.avif" class="locker-img" alt="">
+    
+    <h1 class="text-4xl text-center font-extrabold my-8 text-gray-800">Our Services</h1>
+<div class="flex flex-col md:flex-row justify-around items-center bg-gray-100 p-8 rounded-lg shadow-lg">
+    <div class="max-w-md text-center md:text-left">
+        <h2 class="text-3xl font-semibold text-gray-900">Bank Locker</h2>
+        <p class="text-gray-700 mt-4 leading-relaxed">
+            Banks offer locker facilities to individuals as required. Both public and private sector
+            banks provide this service for a small annual fee. These lockers are
+            maintained in a secure facility under constant surveillance and security. There are
+            several advantages to availing a bank locker.
+        </p>
     </div>
-    <div class="parent-container-face">
+    <img src="./../images/BANK-LOCKER1.avif" class="w-96 h-auto rounded-lg shadow-lg mt-4 md:mt-0" alt="Bank Locker Image">
+</div>
 
-        <div class="child-container-face">
-            <img src="../images/face-recognition-img.jpg" alt="" class="face-recognition-img">
-        </div>
-        <div class="face-head-p">
-            <h2 class="h2">Face Detection</h2>
-
-
-            <p class="p-container">Face detection is a technology used to identify and locate human faces in images or
-                videos. It serves as a foundational step in many applications, including facial recognition, emotion
-                detection, and video surveillance</p>
-        </div>
+<div class="flex flex-col md:flex-row-reverse justify-around items-center bg-gray-100 p-8 rounded-lg shadow-lg mt-6">
+    <div class="max-w-md text-center md:text-left">
+        <h2 class="text-3xl font-semibold text-gray-900">Face Detection</h2>
+        <p class="text-gray-700 mt-4 leading-relaxed">Face detection is a technology used to identify and locate human faces in images or
+            videos. It serves as a foundational step in many applications, including facial recognition, emotion
+            detection, and video surveillance.</p>
     </div>
+    <img src="../images/face-recognition-img.jpg" alt="Face Detection Image" class="w-96 h-auto rounded-lg shadow-lg mt-4 md:mt-0">
+</div>
 
-
-
-    <div class="parent-container-otp">
-        <div class="child-container-otp">
-            <div class="face-head-p">
-                <h2 class="h2">OTP Authentication</h2>
-                <p class="p-container">OTP (One-Time Password) Authentication is a security mechanism that generates a
-                    unique password for a single use, enhancing the security of user accounts and transactions.</p>
-            </div>
-        </div>
-        <img src="../images/OTP-img.jpg" alt="" class="locker-img">
+<div class="flex flex-col md:flex-row justify-around items-center bg-gray-100 p-8 rounded-lg shadow-lg mt-6">
+    <div class="max-w-md text-center md:text-left">
+        <h2 class="text-3xl font-semibold text-gray-900">OTP Authentication</h2>
+        <p class="text-gray-700 mt-4 leading-relaxed">OTP (One-Time Password) Authentication is a security mechanism that generates a
+            unique password for a single use, enhancing the security of user accounts and transactions.</p>
     </div>
-    <footer>
-        <div class="footer-container">
-            <div class="social-icon">
-                <a href="" class="social-icon-ahref"><i class="fa-brands fa-facebook social-icon-img"></i></a>
-                <a href="" class="social-icon-ahref"><i class="fa-brands fa-instagram social-icon-img"></i></a>
-                <a href="" class="social-icon-ahref"><i class="fa-brands fa-twitter social-icon-img"></i></a>
-                <a href="" class="social-icon-ahref"><i class="fa-brands fa-youtube social-icon-img"></i></a>
+    <img src="../images/OTP-img.jpg" alt="OTP Authentication Image" class="w-96 h-auto rounded-lg shadow-lg mt-4 md:mt-0">
+</div>
 
-            </div>
-            <div class="footer-nav">
-                <ul class="footer-ul">
-                    <li class="footer-li"><a href="index.html" class="footer-ahref">Home</a></li>
-                    <li class="footer-li"><a href="./page/about.html" class="footer-ahref">About</a></li>
-                    <li class="footer-li"><a href="./page/contact.html" class="footer-ahref">Contact Us</a></li>
-                    <li class="footer-li"><a href="./index.html" class="footer-ahref">Our Team</a></li>
 
-                </ul>
-            </div>
+
+
+
+
+
+
+
+
+
+
+
+
+<footer class="bg-gray-900 text-white py-8 mt-10">
+    <div class="container mx-auto flex flex-col items-center">
+        <div class="flex space-x-4 mb-4">
+            <a href="#" class="text-white text-2xl hover:text-indigo-500"><i class="fa-brands fa-facebook"></i></a>
+            <a href="#" class="text-white text-2xl hover:text-indigo-500"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#" class="text-white text-2xl hover:text-indigo-500"><i class="fa-brands fa-twitter"></i></a>
+            <a href="#" class="text-white text-2xl hover:text-indigo-500"><i class="fa-brands fa-youtube"></i></a>
         </div>
-        <div class="footer-bottom">
-            <p class="footer-bottom-p">
-                &copy; 2024 <span class="footer-span">Bank Locker Security</span>. All rights reserved.
-            </p>
-        </div>
-    </footer>
+        <ul class="flex space-x-6 text-lg">
+            <li><a href="./../index.html" class="hover:text-indigo-400">Home</a></li>
+            <li><a href="./../page/about.html" class="hover:text-indigo-400">About</a></li>
+            <li><a href="./../page/contact.html" class="hover:text-indigo-400">Contact Us</a></li>
+            <li><a href="./../page/service.html" class="hover:text-indigo-400">Our Services</a></li>
+        </ul>
+        <p class="mt-4 text-sm">&copy; 2024 <span class="text-indigo-400 font-bold">Bank Locker Security</span>. All rights reserved.</p>
+    </div>
+</footer>
+<script src="./../js/script.js"></script>
+
 </body>
 </html>
