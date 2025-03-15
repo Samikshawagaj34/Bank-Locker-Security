@@ -4,8 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-   
+
+
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
         integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
@@ -16,45 +16,47 @@
 <body>
     <nav class="bg-gray-900 p-4">
         <div class="container mx-auto flex justify-between items-center">
-            <h2 class="text-2xl font-bold text-orange-500">Bank Locker Security</h2>
+            <h2 class="text-2xl font-bold text-orange-500"><a href="./../index.html" class="text-orange-500 no-underline">Bank Locker Security</a></h2>
             <button class="md:hidden text-white focus:outline-none" id="menu-toggle">
                 <i class="fa-solid fa-bars text-2xl"></i>
             </button>
             <ul class="hidden md:flex space-x-6 text-white text-lg" id="menu">
-                <li><a href="./../index.html" class="hover:text-indigo-400">Home</a></li>
-                <li><a href="./../page/about.html" class="hover:text-indigo-400">About</a></li>
-                <li><a href="./../page/service.html" class="hover:text-indigo-400">Services</a></li>
-                <li><a href="./../page/contact.html" class="hover:text-indigo-400">Contact</a></li>
+                <li><a href="./../index.html" class="hover:text-orange-400">Home</a></li>
+                <li><a href="./../page/about.html" class="hover:text-orange-400">About</a></li>
+                <li><a href="./../page/service.html" class="hover:text-orange-400">Services</a></li>
+                <li><a href="./../page/contact.html" class="hover:text-orange-400">Contact</a></li>
                 <li>
-                    <a href="./../page/login.html" class="bg-orange-500 px-4 py-2 rounded-md text-white hover:bg-orange-600">Login</a>
+                    <a href="./../page/login.html"
+                        class="bg-orange-500 px-4 py-2 rounded-md text-white hover:bg-orange-600">Login</a>
                 </li>
             </ul>
         </div>
         <div class="md:hidden hidden bg-gray-800 p-4" id="mobile-menu">
             <ul class="flex flex-col space-y-4 text-white text-lg">
-                <li><a href="./../index.html" class="hover:text-indigo-400">Home</a></li>
-                <li><a href="./../page/about.html" class="hover:text-indigo-400">About</a></li>
-                <li><a href="./../page/service.html" class="hover:text-indigo-400">Services</a></li>
-                <li><a href="./../page/contact.html" class="hover:text-indigo-400">Contact</a></li>
+                <li><a href="./../index.html" class="hover:text-orange-400">Home</a></li>
+                <li><a href="./../page/about.html" class="hover:text-orange-400">About</a></li>
+                <li><a href="./../page/service.html" class="hover:text-orange-400">Services</a></li>
+                <li><a href="./../page/contact.html" class="hover:text-orange-400">Contact</a></li>
                 <li>
-                    <a href="./../page/login.html" class="bg-orange-500 px-4 py-2 rounded-md text-white hover:bg-orange-600">Login</a>
+                    <a href="./../page/login.html"
+                        class="bg-orange-500 px-4 py-2 rounded-md text-white hover:bg-orange-600">Login</a>
                 </li>
             </ul>
         </div>
     </nav>
     <div class="container mx-auto p-6">
         <h1 class="text-4xl font-bold text-center text-gray-800">About Us</h1>
-        <p class="text-lg text-center text-gray-600 mt-4 leading-7 px-4">
+        <p class="text-lg text-center text-gray-700 mt-4 leading-7 px-4">
             Welcome to our website, where your security is our top priority. We offer a
             revolutionary bank locker solution with cutting-edge technology to ensure
             peace of mind for our clients.
         </p>
         <hr class="my-6 border-gray-300">
-        
+
         <div class="grid md:grid-cols-2 gap-6">
             <div class="bg-white p-6 rounded-lg shadow-md">
                 <h3 class="text-2xl font-semibold text-center text-gray-700">Our Vision</h3>
-                <p class="text-gray-600 mt-4">
+                <p class="text-gray-700 mt-4">
                     Our vision is to be the industry leader in secure and convenient bank locker access.
                     By leveraging face and OTP authentication technology, we aim to redefine the standard
                     for bank locker security.
@@ -62,103 +64,86 @@
             </div>
             <div class="bg-white p-6 rounded-lg shadow-md">
                 <h3 class="text-2xl font-semibold text-center text-gray-700">Our Mission</h3>
-                <p class="text-gray-600 mt-4">
+                <p class="text-gray-700 mt-4">
                     Our mission is to provide a secure and reliable banking experience by integrating
-                    advanced security measures that protect your assets, ensuring they are safe and accessible only to you.
+                    advanced security measures that protect your assets, ensuring they are safe and accessible only to
+                    you.
                 </p>
             </div>
         </div>
-        
+
         <hr class="my-6 border-gray-300">
-        
+
         <div class="bg-white p-6 rounded-lg shadow-md">
             <h3 class="text-2xl font-semibold text-center text-gray-700">Why Choose Us?</h3>
-            <ul class="list-disc mt-4 text-gray-600 px-6 space-y-2">
+            <ul class="list-disc mt-4 text-gray-700 px-6 space-y-2">
                 <li><b>Enhanced Security:</b> Advanced technology minimizes risks, ensuring safety.</li>
                 <li><b>User-Friendly Experience:</b> Quick and easy locker access.</li>
                 <li><b>Commitment to Innovation:</b> Continuous improvements for top-tier security.</li>
             </ul>
         </div>
-        
+
         <hr class="my-6 border-gray-300">
-        
+
         <section class="my-6">
             <h1 class="text-3xl font-bold text-center text-gray-800">Our Team</h1>
             <div class="grid sm:grid-cols-2 md:grid-cols-4 gap-6 mt-6">
                 <div class="bg-white p-4 rounded-lg shadow-md text-center">
-                    <img src="./../images/samikshanew1.jpg" class="w-32 h-32 mx-auto rounded-full" alt="">
+                    <img src="./../images/samikshanew1.jpg" class="w-32 h-40 mx-auto " alt="">
                     <p class="text-lg font-semibold mt-2">Samiksha Wagaj</p>
                     <div class="flex justify-center gap-3 mt-2">
-                        <a href="mailto:samikshawagaj2003@gmail.com"><img src="./../images/gmail.png" class="w-5" alt=""></a>
-                        <a href="https://github.com/samiksha-wagaj0304"><img src="./../images/github-logo.png" class="w-5" alt=""></a>
-                        <a href="https://www.linkedin.com/in/samiksha-wagaj-343533302/"><img src="./../images/linkedin.png" class="w-5" alt=""></a>
+                        <a href="mailto:samikshawagaj2003@gmail.com"><img src="./../images/gmail.png" class="w-5"
+                                alt=""></a>
+                        <a href="https://github.com/samiksha-wagaj0304"><img src="./../images/github-logo.png"
+                                class="w-5" alt=""></a>
+                        <a href="https://www.linkedin.com/in/samiksha-wagaj-343533302/"><img
+                                src="./../images/linkedin.png" class="w-5" alt=""></a>
                     </div>
                 </div>
                 <div class="bg-white p-4 rounded-lg shadow-md text-center">
-                    <img src="./../images/vaishnavi1.jpg" class="w-32 h-32 mx-auto rounded-full" alt="">
+                    <img src="./../images/vaishnavi1.jpg" class="w-32 h-40 mx-auto " alt="">
                     <p class="text-lg font-semibold mt-2">Vaishnavi Gund</p>
                     <div class="flex justify-center gap-3 mt-2">
-                        <a href="mailto:samikshawagaj2003@gmail.com"><img src="./../images/gmail.png" class="w-5" alt=""></a>
-                        <a href="https://github.com/samiksha-wagaj0304"><img src="./../images/github-logo.png" class="w-5" alt=""></a>
-                        <a href="https://www.linkedin.com/in/samiksha-wagaj-343533302/"><img src="./../images/linkedin.png" class="w-5" alt=""></a>
+                        <a href="mailto:vaishnavigund42@gmail.com"><img src="./../images/gmail.png" class="w-5"
+                                alt=""></a>
+                        <a href="https://github.com/samiksha-wagaj0304"><img src="./../images/github-logo.png"
+                                class="w-5" alt=""></a>
+                        <a href="https://www.linkedin.com/in/samiksha-wagaj-343533302/"><img
+                                src="./../images/linkedin.png" class="w-5" alt=""></a>
                     </div>
                 </div>
                 <div class="bg-white p-4 rounded-lg shadow-md text-center">
-                    <img src="./../images/soni.jpg" class="w-32 h-32 mx-auto rounded-full" alt="">
+                    <img src="./../images/soni.jpg" class="w-32 h-40 mx-auto " alt="">
                     <p class="text-lg font-semibold mt-2">Sonali Mane</p>
                     <div class="flex justify-center gap-3 mt-2">
-                        <a href="mailto:samikshawagaj2003@gmail.com"><img src="./../images/gmail.png" class="w-5" alt=""></a>
-                        <a href="https://github.com/samiksha-wagaj0304"><img src="./../images/github-logo.png" class="w-5" alt=""></a>
-                        <a href="https://www.linkedin.com/in/samiksha-wagaj-343533302/"><img src="./../images/linkedin.png" class="w-5" alt=""></a>
+                        <a href="mailto:smane3136@gmail.com"><img src="./../images/gmail.png" class="w-5" alt=""></a>
+                        <a href="https://github.com/samiksha-wagaj0304"><img src="./../images/github-logo.png"
+                                class="w-5" alt=""></a>
+                        <a href="https://www.linkedin.com/in/samiksha-wagaj-343533302/"><img
+                                src="./../images/linkedin.png" class="w-5" alt=""></a>
                     </div>
                 </div>
                 <div class="bg-white p-4 rounded-lg shadow-md text-center">
-                    <img src="./../images/divya1.jpeg" class="w-32 h-32 mx-auto rounded-full" alt="">
+                    <img src="./../images/divya1.jpeg" class="w-32 h-40 mx-auto " alt="">
                     <p class="text-lg font-semibold mt-2">Divya Spkal</p>
                     <div class="flex justify-center gap-3 mt-2">
-                        <a href="mailto:samikshawagaj2003@gmail.com"><img src="./../images/gmail.png" class="w-5" alt=""></a>
-                        <a href="https://github.com/samiksha-wagaj0304"><img src="./../images/github-logo.png" class="w-5" alt=""></a>
-                        <a href="https://www.linkedin.com/in/samiksha-wagaj-343533302/"><img src="./../images/linkedin.png" class="w-5" alt=""></a>
+                        <a href="mailto:divyasapkal@gmail.com"><img src="./../images/gmail.png" class="w-5" alt=""></a>
+                        <a href="https://github.com/samiksha-wagaj0304"><img src="./../images/github-logo.png"
+                                class="w-5" alt=""></a>
+                        <a href="https://www.linkedin.com/in/samiksha-wagaj-343533302/"><img
+                                src="./../images/linkedin.png" class="w-5" alt=""></a>
                     </div>
                 </div>
             </div>
         </section>
     </div>
 
-
-
-
-
-
-
-
-
-
-
-
-   
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    <footer class="bg-gray-900 text-white py-8 mt-10">
+ <footer class="bg-gray-900 text-white py-8 mt-10">
         <div class="container mx-auto flex flex-col items-center">
             <div class="flex space-x-4 mb-4">
-                <a href="#" class="text-white text-2xl hover:text-indigo-500"><i class="fa-brands fa-facebook"></i></a>
-                <a href="#" class="text-white text-2xl hover:text-indigo-500"><i class="fa-brands fa-instagram"></i></a>
-                <a href="#" class="text-white text-2xl hover:text-indigo-500"><i class="fa-brands fa-twitter"></i></a>
+                <a href="#" class="text-white text-2xl hover:text-indigo-500"><i class="fa-brands fa-google"></i></a>
+                <a href="#" class="text-white text-2xl hover:text-indigo-500"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="#" class="text-white text-2xl hover:text-indigo-500"><i class="fa-brands fa-github"></i></a>
                 <a href="#" class="text-white text-2xl hover:text-indigo-500"><i class="fa-brands fa-youtube"></i></a>
             </div>
             <ul class="flex space-x-6 text-lg">
@@ -167,7 +152,8 @@
                 <li><a href="./../page/contact.html" class="hover:text-indigo-400">Contact Us</a></li>
                 <li><a href="./../page/service.html" class="hover:text-indigo-400">Our Services</a></li>
             </ul>
-            <p class="mt-4 text-sm">&copy; 2024 <span class="text-indigo-400 font-bold">Bank Locker Security</span>. All rights reserved.</p>
+            <p class="mt-4 text-sm">&copy; 2024 <span class="text-indigo-400 font-bold">Bank Locker Security</span>. All
+                rights reserved.</p>
         </div>
     </footer>
     <script src="./../js/script.js"></script>
