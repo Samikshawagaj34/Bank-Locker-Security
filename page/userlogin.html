@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
    
     <script src="https://cdn.tailwindcss.com"></script>
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/face-api.js/1.3.0/face-api.min.js"></script>
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
     integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -50,6 +52,12 @@
                 
                 <input type="password" name="password" placeholder="Enter your password" id="password" required 
                     class="w-full px-4 py-2 border rounded-md focus:ring-2 focus:ring-blue-500 focus:outline-none">
+
+                    <video id="loginVideo" width="320" height="240" autoplay></video>
+    <button id="verify">Verify Face</button>
+    <canvas id="loginCanvas" width="320" height="240" style="display: none;"></canvas>
+    <p id="status"></p>
+    <script src="script.js"></script>
                 
                 <button type="submit" id="login" 
                     class="w-full bg-orange-500 text-white py-2 rounded-md hover:bg-orange-600 transition text-lg font-semibold">

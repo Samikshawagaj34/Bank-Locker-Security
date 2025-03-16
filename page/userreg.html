@@ -9,6 +9,8 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
         integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <script src="script.js"></script>
+        
         <title>Document</title>
     </head>
     <body>
@@ -113,9 +115,16 @@
                         </select>
                     </div>
                 
-                    <div>
+                    <!-- <div>
                         <label for="photo" class="block text-gray-700 font-bold">Upload Photo:</label>
                         <input type="file" id="photo" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-orange-500 focus:outline-none">
+                    </div> -->
+
+                    <div>
+                        <video id="video" width="320" height="240" autoplay></video>
+                        <button id="capture">Capture Photo</button>
+                        <canvas id="canvas" width="320" height="240" style="display: none;"></canvas>
+                        <script src="script.js"></script>                        
                     </div>
                 
                     <button type="submit" class="w-full bg-orange-500 text-white py-2 rounded-md hover:bg-orange-600 transition text-lg font-bold">Register</button>
