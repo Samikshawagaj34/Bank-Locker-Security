@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login | Bank Locker Security</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100">
+
+  <section class="flex items-center justify-center h-screen">
+    <div class="bg-white p-8 rounded shadow-md w-96">
+      <h2 class="text-2xl font-bold mb-6 text-center">Login</h2>
+      
+      <form id="loginForm" class="space-y-4">
+        <input type="email" id="email" placeholder="Email" class="w-full border p-2 rounded" required>
+        <input type="password" id="password" placeholder="Password" class="w-full border p-2 rounded" required>
+        <button type="submit" class="bg-orange-500 text-white w-full py-2 rounded hover:bg-orange-600">Login</button>
+      </form>
+    </div>
+  </section>
+  <script>
+    let receivedOtp = "";
+    
+    document.getElementById('loginForm').addEventListener('submit', async (e) => {
+        e.preventDefault();
+    
+        const email = document.getElementById('email').value.trim();
+        const password = document.getElementById('password').value.trim();
+    
+        if (!email || !password) {
+            alert('Please enter Email and Password.');
+            return;
+        }
+    
+        try {
+            // ✅ Server ला Request पाठवतो (Face Detection चालेल पण Error काही बघायचं नाही)
+            const response = await fetch('http://localhost:5000/api/auth/facelogin', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ email, password })
+            });
+    
+            const data = await response.json();
+            console.log('FaceLogin API Response:', data);
+    
+            // ✅ Success Message द्या लगेच
+            alert('Login Successful!');
+    
+            // ✅ OTP Form Show करा
+            receivedOtp = data.otp;  // Server ने दिलेला OTP वापरणार
+    
+            document.getElementById('loginForm').innerHTML = `
+              <h2 class="text-2xl font-bold mb-6 text-center">Enter OTP</h2>
+              <input type="text" id="otpInput" placeholder="Enter OTP" class="w-full border p-2 rounded mb-4" required>
+              <button onclick="verifyOTP()" class="bg-green-500 text-white w-full py-2 rounded hover:bg-green-600">Verify OTP</button>
+            `;
+    
+        } catch (error) {
+            console.error('Error:', error);
+            alert('Something went wrong.');
+        }
+    });
+    
+    // ✅ OTP Verify करणारा Function
+    function verifyOTP() {
+        const userOtp = document.getElementById('otpInput').value.trim();
+    
+        if (userOtp === receivedOtp) {
+            document.getElementById('loginForm').innerHTML = `
+              <h2 class="text-3xl font-bold text-center text-green-600">Welcome to Bank Locker Security! 🔒</h2>
+            `;
+        } else {
+            alert('Invalid OTP. Please try again.');
+        }
+    }
+    </script>
+    
+  
+
+</body>
+</html>

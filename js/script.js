@@ -41,6 +41,8 @@ else{
 
 }
 
+/*
+
 // Load Face API.js Models
 async function loadModels() {
     await faceapi.nets.ssdMobilenetv1.loadFromUri('/models');  // Face detection
@@ -56,6 +58,7 @@ async function startCamera(videoElement) {
 
 // Capture image and store as face descriptor
 async function captureImage() {
+    
     const video = document.getElementById('video');
     const canvas = document.getElementById('canvas');
     const context = canvas.getContext('2d');
@@ -127,5 +130,33 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 
+
+let video;
+let canvas;
+let nameInput;
+
+function init(){
+    video = document.getElementById('video');
+    canvas = document.getElementById('canvas');
+    nameInput = document.getElementById('nameInput');
+
+    navigator.mediaDevices.getUserMedia({ video: true })
+        .then(stream => {
+            video.srcObject = stream;
+            
+        })
+        .catch(error => {
+            console.log("Error accessing webcam: ", error);
+            alert("cannot access webcam.");
+        });
+}
+
+
+function captureImage() {
+    const context = canvas.getContext('2d');
+    context.drawImage(video, 0, 0, canvas.width, canvas.height);
+    canvas.style.display = 'block';
+    video.style.display = 'none';
+} */
 
 
