@@ -1,84 +1,148 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Login | Bank Locker Security</title>
   <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+  integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+  crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </head>
 <body class="bg-gray-100">
 
-  <section class="flex items-center justify-center h-screen">
-    <div class="bg-white p-8 rounded shadow-md w-96">
-      <h2 class="text-2xl font-bold mb-6 text-center">Login</h2>
-      
-      <form id="loginForm" class="space-y-4">
-        <input type="email" id="email" placeholder="Email" class="w-full border p-2 rounded" required>
-        <input type="password" id="password" placeholder="Password" class="w-full border p-2 rounded" required>
-        <button type="submit" class="bg-orange-500 text-white w-full py-2 rounded hover:bg-orange-600">Login</button>
-      </form>
-    </div>
-  </section>
-  <script>
-    let receivedOtp = "";
-    
-    document.getElementById('loginForm').addEventListener('submit', async (e) => {
-        e.preventDefault();
-    
-        const email = document.getElementById('email').value.trim();
-        const password = document.getElementById('password').value.trim();
-    
-        if (!email || !password) {
-            alert('Please enter Email and Password.');
-            return;
-        }
-    
-        try {
-            // ✅ Server ला Request पाठवतो (Face Detection चालेल पण Error काही बघायचं नाही)
-            const response = await fetch('http://localhost:5000/api/auth/facelogin', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json'
-                },
-                body: JSON.stringify({ email, password })
-            });
-    
-            const data = await response.json();
-            console.log('FaceLogin API Response:', data);
-    
-            // ✅ Success Message द्या लगेच
-            alert('Login Successful!');
-    
-            // ✅ OTP Form Show करा
-            receivedOtp = data.otp;  // Server ने दिलेला OTP वापरणार
-    
-            document.getElementById('loginForm').innerHTML = `
-              <h2 class="text-2xl font-bold mb-6 text-center">Enter OTP</h2>
-              <input type="text" id="otpInput" placeholder="Enter OTP" class="w-full border p-2 rounded mb-4" required>
-              <button onclick="verifyOTP()" class="bg-green-500 text-white w-full py-2 rounded hover:bg-green-600">Verify OTP</button>
-            `;
-    
-        } catch (error) {
-            console.error('Error:', error);
-            alert('Something went wrong.');
-        }
-    });
-    
-    // ✅ OTP Verify करणारा Function
-    function verifyOTP() {
-        const userOtp = document.getElementById('otpInput').value.trim();
-    
-        if (userOtp === receivedOtp) {
-            document.getElementById('loginForm').innerHTML = `
-              <h2 class="text-3xl font-bold text-center text-green-600">Welcome to Bank Locker Security! 🔒</h2>
-            `;
-        } else {
-            alert('Invalid OTP. Please try again.');
-        }
+<!-- Navbar -->
+<nav class="bg-gray-900 p-4">
+  <div class="container mx-auto flex justify-between items-center">
+    <h2 class="text-2xl font-bold text-orange-500"><a href="./../index.html">Bank Locker Security</a></h2>
+    <ul class="hidden md:flex space-x-6 text-white text-lg">
+      <li><a href="./../index.html" class="hover:text-orange-400">Home</a></li>
+      <li><a href="./../templates/about.html" class="hover:text-orange-400">About</a></li>
+      <li><a href="./../templates/service.html" class="hover:text-orange-400">Services</a></li>
+      <li><a href="./../templates/contact.html" class="hover:text-orange-400">Contact</a></li>
+      <li>
+        <a href="./../templates/login.html" class="bg-orange-500 px-4 py-2 rounded-md text-white hover:bg-orange-600">Login</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+<!-- Login Section -->
+<section class="flex items-center justify-center h-screen">
+  <div class="bg-white p-8 rounded shadow-md w-96">
+    <h2 class="text-2xl font-bold mb-6 text-center">Login</h2>
+    <form id="loginForm" class="space-y-4">
+      <input type="email" id="email" placeholder="Email" class="w-full border p-2 rounded" required>
+      <input type="password" id="password" placeholder="Password" class="w-full border p-2 rounded" required>
+      <button type="submit" class="bg-orange-500 text-white w-full py-2 rounded hover:bg-orange-600">Login</button>
+      <p class="mt-4 text-center text-gray-600 text-sm">
+        Don't have an account? 
+        <a href="./../templates/userreg.html" class="text-orange-500 hover:underline font-semibold">Register</a>
+      </p>
+    </form>
+    <div id="recaptcha-container" class="mt-4"></div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="bg-gray-900 text-white py-8 mt-10">
+  <div class="container mx-auto flex flex-col items-center">
+      <div class="flex space-x-4 mb-4">
+          <a href="banklocker2025@gmail.com" class="text-white text-2xl hover:text-indigo-500"><i class="fa-brands fa-google"></i></a>
+          <a href="https://www.linkedin.com/in/samiksha-wagaj-343533302" class="text-white text-2xl hover:text-indigo-500"><i class="fa-brands fa-linkedin"></i></a>
+          <a href="https://github.com/samiksha-wagaj0304" class="text-white text-2xl hover:text-indigo-500"><i class="fa-brands fa-github"></i></a>
+          <a href="#" class="text-white text-2xl hover:text-indigo-500"><i class="fa-brands fa-youtube"></i></a>
+      </div>
+      <ul class="flex space-x-6 text-lg">
+          <li><a href="./../index.html" class="hover:text-indigo-400">Home</a></li>
+          <li><a href="./../templates/about.html" class="hover:text-indigo-400">About</a></li>
+          <li><a href="./../templates/contact.html" class="hover:text-indigo-400">Contact Us</a></li>
+          <li><a href="./../templates/service.html" class="hover:text-indigo-400">Our Services</a></li>
+      </ul>
+      <p class="mt-4 text-sm">&copy; 2024 <span class="text-orange-400 font-bold">Bank Locker Security</span>. All rights reserved.</p>
+  </div>
+</footer>
+
+<script>
+  let receivedOtp = "";
+  let otpTimestamp = null;
+  let otpExpiryTime = 300; // 5 minutes = 300 seconds
+  let countdownInterval;
+
+  document.getElementById('loginForm').addEventListener('submit', async (e) => {
+    e.preventDefault();
+    const email = document.getElementById('email').value.trim();
+    const password = document.getElementById('password').value.trim();
+
+    if (!email || !password) {
+      alert('Please enter Email and Password.');
+      return;
     }
-    </script>
+
+    try {
+      const response = await fetch('http://localhost:5000/api/auth/facelogin', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ email, password })
+      });
+
+      const data = await response.json();
+
+      if (response.ok && data.phone && data.otp) {
+        receivedOtp = data.otp;
+        otpTimestamp = data.timestamp; // store timestamp from backend
+        startCountdown(); // start countdown timer for OTP expiration
+
+        document.getElementById('loginForm').innerHTML = `
+          <h2 class="text-2xl font-bold mb-6 text-center">Enter OTP</h2>
+          <input type="text" id="otpInput" placeholder="Enter OTP" class="w-full border p-2 rounded mb-4" required>
+          <button onclick="verifyOTP()" class="bg-orange-500 text-white w-full py-2 rounded hover:bg-orange-600">Verify OTP</button>
+          <div id="otp-timer" class="mt-4 text-center text-sm text-red-500">Time left: 5:00</div> 
+        `;
+      } else {
+        alert(data.message || 'Face match failed.');
+      }
+    } catch (error) {
+      console.error('Error:', error);
+      alert('Something went wrong.');
+    }
+  });
+
+  // Start countdown timer for OTP
+  function startCountdown() {
+    countdownInterval = setInterval(() => {
+      const currentTime = Date.now();
+      const timeElapsed = currentTime - otpTimestamp;
+      const timeLeft = otpExpiryTime - Math.floor(timeElapsed / 1000); // convert time to seconds
+
+      if (timeLeft <= 0) {
+        clearInterval(countdownInterval);
+        document.getElementById('otp-timer').innerText = 'OTP Expired';
+      } else {
+        const minutes = Math.floor(timeLeft / 60);
+        const seconds = timeLeft % 60;
+        document.getElementById('otp-timer').innerText = `Time left: ${minutes}:${seconds.toString().padStart(2, '0')}`;
+      }
+    }, 1000); // Update every second
+  }
+
+  // Verify OTP
+  function verifyOTP() {
+    const userOtp = document.getElementById('otpInput').value.trim();
     
-  
+    if (userOtp === receivedOtp) {
+      document.getElementById('loginForm').innerHTML = `
+        <h2 class="text-3xl font-bold text-center text-orange-600">Welcome to Bank Locker Security! 🔒</h2>
+        <p class="text-center text-gray-700 mt-2 text-lg">
+  You are an <span class="font-semibold text-orange-600">authorized person</span>. Access has been <span class="font-semibold text-orange-600">granted</span>.
+</p>
+      `;
+    } else {
+      alert("Invalid OTP. Please try again.");
+    }
+  }
+</script>
 
 </body>
 </html>

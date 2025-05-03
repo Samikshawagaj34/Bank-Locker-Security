@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Dashboard | Bank Locker Security</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+  integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+  crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body class="bg-gray-100 min-h-screen">
+  <!-- Navbar -->
+  <nav class="bg-gray-900 p-4">
+    <div class="container mx-auto flex justify-between items-center">
+        <h2 class="text-2xl font-bold text-orange-500"><a href="./../index.html" class="text-orange-500 no-underline">Bank Locker Security</a></h2>
+        <button class="md:hidden text-white focus:outline-none" id="menu-toggle">
+            <i class="fa-solid fa-bars text-2xl"></i>
+        </button>
+        <ul class="hidden md:flex space-x-6 text-white text-lg" id="menu">
+            <li><a href="./../index.html" class="hover:text-orange-400">Home</a></li>
+            <li><a href="./../templates/about.html" class="hover:text-orange-400">About</a></li>
+            <li><a href="./../templates/service.html" class="hover:text-orange-400">Services</a></li>
+            <li><a href="./../templates/contact.html" class="hover:text-orange-400">Contact</a></li>
+            <li>
+                <a href="./../templates/login.html"
+                    class="bg-orange-500 px-4 py-2 rounded-md text-white hover:bg-orange-600">Login</a>
+            </li>
+        </ul>
+    </div>
+    <div class="md:hidden hidden bg-gray-800 p-4" id="mobile-menu">
+        <ul class="flex flex-col space-y-4 text-white text-lg">
+            <li><a href="./../index.html" class="hover:text-orange-400">Home</a></li>
+            <li><a href="./../templates/" class="hover:text-orange-400">About</a></li>
+            <li><a href="./../templates/service.html" class="hover:text-orange-400">Services</a></li>
+            <li><a href="./../templates/contact.html" class="hover:text-orange-400">Contact</a></li>
+            <li>
+                <a href="./../page/login.html"
+                    class="bg-orange-500 px-4 py-2 rounded-md text-white hover:bg-orange-600">Login</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+ 
+    <div class="container mx-auto flex justify-between items-center">
+      <h1 class="text-2xl font-bold text-center mt-10 ">Admin Dashboard</h1>
+      <span class="">Welcome, Admin</span>
+    </div>
+  
+
+  <!-- Dashboard Content -->
+  <main class="container mx-auto mt-10">
+    <div class="bg-white shadow-lg rounded-lg p-6">
+      <h2 class="text-xl font-semibold mb-4">Registered Users</h2>
+      <table class="w-full table-auto border border-gray-200">
+        <thead class="bg-gray-100 text-gray-700">
+          <tr>
+            <th class="px-4 py-2">ID</th>
+            <th class="px-4 py-2">Email</th>
+            <th class="px-4 py-2">Phone</th>
+            <th class="px-4 py-2">Status</th>
+            <th class="px-4 py-2">Actions</th>
+          </tr>
+        </thead>
+        <tbody id="userTable">
+          <!-- User rows injected here -->
+        </tbody>
+      </table>
+    </div>
+  </main>
+  <footer class="bg-gray-900 text-white py-8 mt-10">
+    <div class="container mx-auto flex flex-col items-center">
+        <div class="flex space-x-4 mb-4">
+            <a href="banklocker2025@gmail.com" class="text-white text-2xl hover:text-indigo-500"><i class="fa-brands fa-google"></i></a>
+            <a href="https://www.linkedin.com/in/samiksha-wagaj-343533302" class="text-white text-2xl hover:text-indigo-500"><i class="fa-brands fa-linkedin"></i></a>
+            <a href="https://github.com/samiksha-wagaj0304" class="text-white text-2xl hover:text-indigo-500"><i class="fa-brands fa-github"></i></a>
+            <a href="#" class="text-white text-2xl hover:text-indigo-500"><i class="fa-brands fa-youtube"></i></a>
+        </div>
+        <ul class="flex space-x-6 text-lg">
+            <li><a href="./../index.html" class="hover:text-indigo-400">Home</a></li>
+            <li><a href="./../templates/about.html" class="hover:text-indigo-400">About</a></li>
+            <li><a href="./../templates/contact.html" class="hover:text-indigo-400">Contact Us</a></li>
+            <li><a href="./../templates/service.html" class="hover:text-indigo-400">Our Services</a></li>
+        </ul>
+        <p class="mt-4 text-sm">&copy; 2024 <span class="text-orange-400 font-bold">Bank Locker Security</span>. All rights reserved.</p>
+    </div>
+</footer>
+
+  <script>
+    async function loadUsers() {
+      try {
+        // Ensure your API endpoint is correct and fetch data from the backend
+        const response = await fetch('http://localhost:5000/api/admin/dashboard/users');
+        const users = await response.json();
+
+        const table = document.getElementById('userTable');
+        table.innerHTML = users.map(user => `
+          <tr class="text-center border-t">
+            <td class="px-4 py-2">${user.id}</td>  <!-- Use 'id' instead of '_id' for MySQL -->
+            <td class="px-4 py-2">${user.email}</td>
+            <td class="px-4 py-2">${user.phone}</td>
+            <td class="px-4 py-2">
+              <span class="${user.status === 'blocked' ? 'text-red-500' : 'text-green-600'} font-medium">
+                ${user.status}
+              </span>
+            </td>
+            <td class="px-4 py-2 space-x-2">
+              <button class="bg-red-500 text-white px-3 py-1 rounded hover:bg-red-600" onclick="blockUser(${user.id})">Block</button>
+              <button class="bg-green-500 text-white px-3 py-1 rounded hover:bg-green-600" onclick="unblockUser(${user.id})">Unblock</button>
+            </td>
+          </tr>
+        `).join('');
+      } catch (err) {
+        console.error("Error loading users:", err);
+      }
+    }
+
+    async function blockUser(userId) {
+      try {
+        // Ensure your API endpoint is correct
+        await fetch(`http://localhost:5000/api/admin/dashboard/block/${userId}`, { method: 'POST' });
+        loadUsers();  // Reload users after blocking
+      } catch (err) {
+        console.error("Error blocking user:", err);
+      }
+    }
+
+    async function unblockUser(userId) {
+      try {
+        // Ensure your API endpoint is correct
+        await fetch(`http://localhost:5000/api/admin/dashboard/unblock/${userId}`, { method: 'POST' });
+        loadUsers();  // Reload users after unblocking
+      } catch (err) {
+        console.error("Error unblocking user:", err);
+      }
+    }
+
+    loadUsers();  // Initial call to load users
+  </script>
+</body>
+</html>

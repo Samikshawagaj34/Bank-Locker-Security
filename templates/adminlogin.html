@@ -3,13 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   
-    
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
     integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <title>admin </title>
+    <title>Admin Login</title>
 </head>
 <body>
     <nav class="bg-gray-900 p-4">
@@ -20,57 +18,103 @@
             </button>
             <ul class="hidden md:flex space-x-6 text-white text-lg" id="menu">
                 <li><a href="./../index.html" class="hover:text-orange-400">Home</a></li>
-                <li><a href="./../page/about.html" class="hover:text-orange-400">About</a></li>
-                <li><a href="./../page/service.html" class="hover:text-orange-400">Services</a></li>
-                <li><a href="./../page/contact.html" class="hover:text-orange-400">Contact</a></li>
+                <li><a href="./../templates/about.html" class="hover:text-orange-400">About</a></li>
+                <li><a href="./../templates/service.html" class="hover:text-orange-400">Services</a></li>
+                <li><a href="./../templates/contact.html" class="hover:text-orange-400">Contact</a></li>
                 <li>
-                    <a href="./../page/login.html" class="bg-orange-500 px-4 py-2 rounded-md text-white hover:bg-orange-600">Login</a>
+                    <a href="./../templates/login.html" class="bg-orange-500 px-4 py-2 rounded-md text-white hover:bg-orange-600">Login</a>
                 </li>
             </ul>
         </div>
         <div class="md:hidden hidden bg-gray-800 p-4" id="mobile-menu">
             <ul class="flex flex-col space-y-4 text-white text-lg">
                 <li><a href="./../index.html" class="hover:text-orange-400">Home</a></li>
-                <li><a href="./../page/about.html" class="hover:text-orange-400">About</a></li>
-                <li><a href="./../page/service.html" class="hover:text-orange-400">Services</a></li>
-                <li><a href="./../page/contact.html" class="hover:text-orange-400">Contact</a></li>
+                <li><a href="./../templates/about.html" class="hover:text-orange-400">About</a></li>
+                <li><a href="./../templates/service.html" class="hover:text-orange-400">Services</a></li>
+                <li><a href="./../templates/contact.html" class="hover:text-orange-400">Contact</a></li>
                 <li>
-                    <a href="./../page/login.html" class="bg-orange-500 px-4 py-2 rounded-md text-white hover:bg-orange-600">Login</a>
+                    <a href="./../templates/login.html" class="bg-orange-500 px-4 py-2 rounded-md text-white hover:bg-orange-600">Login</a>
                 </li>
             </ul>
         </div>
     </nav>
+
     <div class="flex flex-col items-center justify-center min-h-screen bg-gray-100">
         <h1 class="text-3xl font-bold mb-6 text-gray-800">Login Here</h1>
         <div class="bg-white p-6 rounded-lg shadow-lg w-full max-w-sm">
-            <form action="#" class="flex flex-col space-y-4">
-                <input type="email" class="w-full px-4 py-2 border rounded-md focus:ring-2 focus:ring-orange-500 focus:outline-none" placeholder="Enter your email" required>
-                <input type="password" class="w-full px-4 py-2 border rounded-md focus:ring-2 focus:ring-orange-500 focus:outline-none" placeholder="Enter your password" required>
+            <form id="login-form" class="flex flex-col space-y-4">
+                <input type="email" id="email" class="w-full px-4 py-2 border rounded-md focus:ring-2 focus:ring-orange-500 focus:outline-none" placeholder="Enter your email" required>
+                <input type="password" id="password" class="w-full px-4 py-2 border rounded-md focus:ring-2 focus:ring-orange-500 focus:outline-none" placeholder="Enter your password" required>
                 <button type="submit" class="w-full bg-orange-500 text-white py-2 rounded-md hover:bg-orange-600 transition text-lg font-semibold">Login</button>
                 <p class="text-sm text-gray-600 text-center">Don't have an account? 
-                    <a href="./../page/adminreg.html" class="text-orange-500 font-semibold hover:underline">Register here</a>
+                    <a href="./../templates/adminreg.html" class="text-orange-500 font-semibold hover:underline">Register here</a>
                 </p>
             </form>
         </div>
     </div>
-    
+
     <footer class="bg-gray-900 text-white py-8 mt-10">
         <div class="container mx-auto flex flex-col items-center">
             <div class="flex space-x-4 mb-4">
-                <a href="#" class="text-white text-2xl hover:text-indigo-500"><i class="fa-brands fa-google"></i></a>
-                <a href="#" class="text-white text-2xl hover:text-indigo-500"><i class="fa-brands fa-linkedin"></i></a>
-                <a href="#" class="text-white text-2xl hover:text-indigo-500"><i class="fa-brands fa-github"></i></a>
+                <a href="banklocker2025@gmail.com" class="text-white text-2xl hover:text-indigo-500"><i class="fa-brands fa-google"></i></a>
+                <a href="https://www.linkedin.com/in/samiksha-wagaj-343533302" class="text-white text-2xl hover:text-indigo-500"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="https://github.com/samiksha-wagaj0304" class="text-white text-2xl hover:text-indigo-500"><i class="fa-brands fa-github"></i></a>
                 <a href="#" class="text-white text-2xl hover:text-indigo-500"><i class="fa-brands fa-youtube"></i></a>
             </div>
             <ul class="flex space-x-6 text-lg">
                 <li><a href="./../index.html" class="hover:text-indigo-400">Home</a></li>
-                <li><a href="./../page/about.html" class="hover:text-indigo-400">About</a></li>
-                <li><a href="./../page/contact.html" class="hover:text-indigo-400">Contact Us</a></li>
-                <li><a href="./../page/service.html" class="hover:text-indigo-400">Our Services</a></li>
+                <li><a href="./../templates/about.html" class="hover:text-indigo-400">About</a></li>
+                <li><a href="./../templates/contact.html" class="hover:text-indigo-400">Contact Us</a></li>
+                <li><a href="./../templates/service.html" class="hover:text-indigo-400">Our Services</a></li>
             </ul>
             <p class="mt-4 text-sm">&copy; 2024 <span class="text-orange-400 font-bold">Bank Locker Security</span>. All rights reserved.</p>
         </div>
     </footer>
+
+    <!-- Link to the script.js -->
     <script src="./../js/script.js"></script>
+   <script>
+    // Wait for the DOM to be fully loaded
+document.addEventListener('DOMContentLoaded', () => {
+    const form = document.getElementById('login-form');
+    form.addEventListener('submit', handleLogin);
+});
+
+function handleLogin(event) {
+    event.preventDefault(); // Prevent form submission
+
+    const email = document.getElementById('email').value;
+    const password = document.getElementById('password').value;
+
+    if (!email || !password) {
+        alert('Please enter both email and password');
+        return;
+    }
+
+    const loginData = { email, password };
+
+    fetch('http://localhost:5000/api/admin/login', { // ✅ Corrected path
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(loginData)
+    })
+    .then(response => response.json())
+    .then(data => {
+        if (data.message === 'Login successful') {
+            alert('Login successful!');
+            window.location.href = './../templates/admindashboard.html'; // ✅ Redirect to dashboard
+        } else {
+            alert(data.message || 'Invalid email or password');
+        }
+    })
+    .catch(error => {
+        console.error('Error:', error);
+        alert('An error occurred while logging in');
+    });
+}
+
+    </script>
 </body>
 </html>
